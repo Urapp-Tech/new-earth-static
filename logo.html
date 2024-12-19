@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>logo-transition</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="Stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+  <section class="logo-module">
+    <div class="container">
+      <div class="main-logo-tr">
+        <div class="logo-right">
+          <img src="assets/images/cloud-right.png" alt="cloud" width="510" height="450">
+        </div>
+
+
+        <div class="obj-two">
+          <img src="assets/images/logos/obj-2.png" alt="logo" width="46" height="30">
+          <div class="obj-one">
+            <img src="assets/images/logos/obj-1.png" alt="logo" width="16" height="16">
+          </div>
+        </div>
+        <div class="obj-three">
+          <img src="assets/images/logos/obj-3.png" alt="logo" width="174" height="48">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Bootstrap 5 JS and Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+
+  <script>
+    window.addEventListener('load', () => {
+      document.querySelector('.main-logo-tr').classList.add('loaded');
+    });
+  </script>
+</body>
+
+</html>

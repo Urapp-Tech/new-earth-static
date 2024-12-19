@@ -1,0 +1,41 @@
+    document.addEventListener('DOMContentLoaded', () => {
+      const mainTitle = document.querySelector('.main-title');
+      const heroTrees = document.querySelector('.hero-trees');
+      const heroBuilding = document.querySelector('.hero-building');
+
+      let scrollStep = 0; // Keeps track of animation steps
+
+      const handleScroll = () => {
+        if (scrollStep === 0) {
+          // Step 1: Show main title
+          mainTitle.classList.add('visible');
+          scrollStep++;
+        } else if (scrollStep === 1) {
+          // Step 2: Show trees and building
+          heroTrees.classList.add('visible');
+          heroBuilding.classList.add('visible');
+          scrollStep++;
+        }
+      };
+
+      // Listen for wheel events
+      window.addEventListener('wheel', (event) => {
+        if (event.deltaY > 0) { // Trigger only on downward scroll
+          handleScroll();
+        }
+      });
+
+      // Optional: Listen for touch events for mobile
+      let touchStartY = 0;
+
+      window.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0].clientY;
+      });
+
+      window.addEventListener('touchmove', (event) => {
+        const touchEndY = event.touches[0].clientY;
+        if (touchStartY - touchEndY > 50) { // Trigger only on downward swipe
+          handleScroll();
+        }
+      });
+    });

@@ -1,0 +1,300 @@
+.is--about {
+    overflow: unset !important;
+}
+
+.about-banner {
+    min-height: 770px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('../images/about/about-banner.webp');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+
+}
+
+.about-banner .about-content {
+    max-width: 917px;
+    margin: auto;
+}
+
+.about-banner .about-content h1 {
+    font-size: 96px;
+    line-height: 100px;
+    color: #1e1e1e;
+    font-weight: 900;
+    margin: 0;
+    text-align: center;
+}
+
+section.mission-banner {
+    padding: 7% 0;
+    background-color: #EFFBFF;
+}
+
+section.mission-banner .mission-content {
+    max-width: 1120px;
+    margin: auto;
+}
+
+section.mission-banner .mission-content h2 {
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 30px;
+    color: #1e1e1e;
+    margin-bottom: 20px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+section.mission-banner .mission-content p {
+    font-size: 35px;
+    line-height: 43px;
+    font-weight: 400;
+    color: #1e1e1e;
+    text-align: center;
+}
+
+section.research-banner {
+    min-height: 448px;
+    padding: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/about/about-banner-2.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+section.research-banner .research-content {
+    max-width: 1352px;
+    margin: auto;
+    background: #fff;
+    padding: 64px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 20px;
+}
+
+section.research-banner .research-content h2 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 900;
+    color: #1e1e1e;
+    max-width: 242px;
+}
+
+section.research-banner .research-content p {
+    max-width: 620px;
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #1e1e1e;
+}
+
+
+.our-values-banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../images/about/about-banner-3.webp);
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.our-values-banner .our-values {
+    padding: 5% 4%;
+    border-radius: 20px;
+    background: #fff;
+}
+
+.our-values-banner .our-values h2 {
+    font-size: 50px;
+    line-height: 50px;
+    font-weight: 900;
+    max-width: 248px;
+}
+
+.our-values-banner .our-values .value-icon {
+    max-width: 46px;
+    height: 46px;
+    margin-bottom: 25px;
+}
+
+.our-values-banner .our-values .value-icon img.img-fluid {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.our-values-banner .our-values h3 {
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 900;
+    text-transform: capitalize;
+    color: #1e1e1e;
+}
+
+.our-values-banner .our-values p {
+    font-size: 22px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #1e1e1e;
+    margin: 15px 0 0;
+    max-width: 530px;
+}
+
+.research-banner.emotional {
+    padding: 8% 0 !important;
+    background-image: url(../images/about/about-banner-4.webp);
+    background-position: center;
+}
+
+
+.mission-banner.solution .problem-wrapper {
+    margin: 0;
+    padding: 0;
+}
+
+.mission-banner.solution .problem-wrapper li {
+    list-style: none;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.mission-banner.solution .problem-wrapper li p {
+    color: #1e1e1e;
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: 700;
+    text-align: left;
+}
+
+.mission-banner.solution .problem-wrapper li p span {
+    color: #f47f4a;
+}
+
+.mission-banner.solution .problem-wrapper li::before {
+    content: '';
+    position: absolute;
+    left: -56px;
+    top: -5px;
+    width: 35px;
+    height: 35px;
+    z-index: 1;
+    background-image: url(../images/icon/ic-check-2.svg);
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.solution-banner {
+    padding: 8% 0;
+    background: #EFFBFF;
+}
+
+.solution-banner h2 {
+    font-size: 40px;
+    line-height: 50px;
+    font-weight: 700;
+    max-width: 831px;
+    margin: 0 auto 30px;
+    text-align: center;
+}
+
+.solution-banner .mobile-wrapper {
+    max-width: 1142px;
+    height: 718px;
+    margin: 40px auto 0;
+}
+
+.solution-banner .mobile-wrapper img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer {
+    min-height: 541px;
+    background-image: url('../images/about/footer.webp');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 66px 0 0;
+}
+
+footer .footer-wrap {
+    display: flex;
+    justify-content: space-between;
+}
+
+footer .footer-wrap .footer-logo {
+    max-width: 164px;
+    height: 30px;
+    width: 20%;
+}
+
+footer .footer-wrap .footer-logo img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+footer .footer-wrap .footer-nav {
+    width: 80%;
+}
+
+footer .footer-wrap .footer-nav ul {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+footer .footer-wrap .footer-nav ul li {
+    list-style: none;
+}
+
+footer .footer-wrap .footer-nav ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+footer .footer-wrap .footer-nav .social-wrap {
+    margin: 3px 0;
+}
+
+footer .footer-wrap .footer-nav .social-wrap .social-icons {
+    margin-top: 14px;
+    gap: 15px;
+    align-items: center;
+}
+
+footer .footer-wrap .footer-nav .social-wrap a {
+    display: block;
+    text-align: right;
+    margin-bottom: 30px;
+}
+
+footer .footer-wrap .footer-nav .social-wrap .social-icons a {
+    width: 24px;
+    height: 24px;
+}
+
+footer .footer-wrap .footer-nav .social-wrap .social-icons a img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}

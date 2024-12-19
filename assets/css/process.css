@@ -1,0 +1,204 @@
+.process .about-banner {
+    min-height: 310px;
+    background-image: url('../images/process/process-one.png');
+}
+
+.p-two .about-banner {
+    min-height: 310px;
+    background-image: url('../images/process/process-two.png');
+}
+
+.process .about-banner .about-content {
+    max-width: 782px;
+}
+
+.process .about-banner .about-content h1 {
+    font-size: 64px;
+    line-height: 75px;
+    font-weight: 700;
+    color: #1e1e1e;
+    margin: 0;
+}
+
+.process .inside-process {
+    padding: 5% 0;
+    background: url('../images/process/bg-blur.png');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+}
+
+.process .inside-process .inside-wrapper {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.process .inside-process .inside-wrapper h2 {
+    max-width: 209px;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
+    text-transform: capitalize;
+    margin: 0;
+}
+
+.process .inside-process .inside-wrapper p {
+    max-width: 665px;
+    font-family: 'Futura Bk BT';
+    font-size: 14px;
+    line-height: 18px;
+    font-weight: 400;
+    margin: 0;
+}
+
+.process .inside-grids .inside-box {
+    max-width: 321px;
+    margin: auto
+}
+
+
+
+
+
+.process .inside-grids .inside-box .title {
+    font-size: 18px;
+    font-weight: bold;
+    line-height: normal;
+    text-align: center;
+    margin: 0 0 20px;
+    color: #1e1e1e;
+}
+
+h3.title {}
+
+.process .inside-grids .inside-box p {
+    font-family: 'FUTURA BK BT';
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 400;
+    text-align: left;
+    color: #1e1e1e;
+    margin: 0 0 30px;
+}
+
+.process .inside-grids .inside-box .inside-media {
+    max-width: 246px;
+    margin: auto;
+    height: 330px;
+}
+
+.process .inside-grids .inside-box .inside-media img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: bottom;
+}
+
+.process .inside-grids .inside-box {
+    background: #fff;
+    padding: 40px 30px 0;
+    border-radius: 4px;
+}
+
+.process footer {
+    min-height: 365px;
+    background-position: bottom;
+}
+
+.process header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: #ffffffa3;
+    padding: 22px 0;
+}
+
+
+.process.p-two .inside-tabs .tab-content .survey-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 19px;
+    background: #f1f1f1;
+    border-radius: 20px;
+    margin: 60px 0;
+}
+
+.process.p-two .inside-tabs .tab-content .survey-wrapper .survey-media {
+    max-width: 608px;
+    height: 608px;
+}
+
+.process.p-two .inside-tabs .tab-content .survey-wrapper .survey-media img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.process.p-two .inside-tabs .tab-content .survey-wrapper .survey-content {
+    max-width: 622px;
+    padding: 0 15px;
+}
+
+.process.p-two .inside-tabs .tab-content .survey-wrapper .survey-content h3 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: normal;
+    margin: 0 0 25px;
+    max-width: 333px;
+    color: #1e1e1e;
+}
+
+.process.p-two .inside-tabs .tab-content .survey-wrapper .survey-content p {
+    font-family: 'Futura Bk BT';
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #1e1e1e;
+    margin-bottom: 25px;
+}
+
+.process.p-two .inside-tabs .nav-tabs {
+    justify-content: space-evenly;
+    border: none;
+    position: relative;
+}
+
+.process.p-two .inside-process {
+    background: transparent;
+    padding: 70px 0 0;
+}
+
+.process.p-two .inside-tabs .nav-tabs .nav-link {
+    width: auto;
+    background: #f1f1f1;
+    border-radius: 40px;
+    padding: 8px 40px;
+    font-size: 16px;
+    line-height: normal;
+    font-weight: bold;
+    color: #1e1e1e;
+}
+
+.process.p-two .inside-tabs .nav-tabs::before {
+    content: '';
+    width: 80%;
+    height: 4px;
+    background: #f1f1f1;
+    position: absolute;
+    top: 15px;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+.process.p-two .inside-tabs .nav-tabs .nav-link .active {
+    background: #F47F4A;
+    color: #fff;
+}
