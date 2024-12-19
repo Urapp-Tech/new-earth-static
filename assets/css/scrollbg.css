@@ -10,7 +10,7 @@ body {
 .header,
 .footer {
     position: sticky;
-    z-index: 10;
+    z-index: 111;
     text-align: center;
     background: #333;
     color: white;
@@ -179,10 +179,10 @@ body {
     background: #8c8682;
     position: absolute;
     /* right: -88px; */
-    right: -112px;
+    right: -169px;
     left: auto;
-    z-index: 11;
-    min-height: 180px;
+    z-index: 1111;
+    min-height: 150px;
     max-width: 224px;
     border: none;
     border-radius: 5px;
@@ -195,11 +195,43 @@ body {
     object-fit: contain;
 }
 
+.is--bedroom .arrow-wrap {
+    position: absolute;
+    left: 110px;
+    top: 110px;
+    z-index: 11;
+
+}
+
+.is--bedroom .arrow-wrap a {
+    max-width: 65px;
+    height: 20px;
+}
+
+.is--bedroom .arrow-wrap a img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
 .is--bedroom .title-badge {
     position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 111;
+    top: 160px;
+    left: 110px;
+    z-index: 11;
+    background-image: url('../images/bed/bed.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 437px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
 }
 
 .is--bedroom .title-badge .extra-content {
@@ -209,7 +241,7 @@ body {
 }
 
 .is--bedroom .title-badge .extra-content.open {
-    max-height: 300px;
+    max-height: 350px;
     /* Adjust based on the expected height of content */
 }
 
@@ -217,14 +249,51 @@ body {
     cursor: pointer;
     color: #007bff;
     text-decoration: none;
+    background: #b3afad;
+    max-width: 164px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+    text-transform: capitalize;
 }
 
 .is--bedroom .title-badge .read-btn span {
     display: inline-block;
     transform: rotate(0deg);
     transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    line-height: 22px;
+    font-size: 19px;
 }
 
-.is--bedroom .read-btn.open span {
+/* .is--bedroom .read-btn.open span {
     transform: rotate(45deg);
+} */
+
+.is--bedroom .title-badge h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 50px;
+    color: #1e1e1e;
+    margin: 0;
+}
+
+.is--bedroom .title-badge p {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #1e1e1e;
+    text-align: center;
+    margin: 0 0 12px;
 }
