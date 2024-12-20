@@ -20,7 +20,7 @@
   <section class="hero-one ">
     <div class="container-fluid px-0">
 
-      <header class="d-none">
+      <header>
         <div class="container">
           <div class="row header-main">
             <div class="col-md-6">
@@ -56,7 +56,7 @@
 
     </div>
     <!-- owl carousel -->
-    <div class="testimonial-wrap d-none">
+    <div class="testimonial-wrap">
       <div class="carousel-container">
         <div class="owl-carousel owl-theme">
           <div class="item">
@@ -180,10 +180,10 @@
     <!-- owl carousel end -->
 
     <!-- remodel section -->
-    <div class="remodel-wrap mt-5 d-none">
+    <div class="remodel-wrap mt-5 ">
       <div class="container">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-6  remodel-left">
             <div class="left-context">
               <h2>Remodel</h2>
               <h2>Renovate</h2>
@@ -193,7 +193,7 @@
             </div>
 
           </div>
-          <div class="col-md-6">
+          <div class="col-md-6  remodel-right">
             <div class="right-context">
               <ul>
                 <li>
@@ -221,7 +221,7 @@
     </div>
     <!-- mobile App section -->
 
-    <div class="sec-mobile-app d-none">
+    <div class="sec-mobile-app">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -231,8 +231,9 @@
           </div>
           <div class="col-md-6">
             <div class="mobile-content">
-              <h2>mobile app coming soon</h2>
-              <ul>
+              <h2 class="right
+              -heading">mobile app coming soon</h2>
+              <ul class="right-ul">
                 <li><span>100% project visibility </span></li>
                 <li><span>Daily project tracking</span></li>
                 <li><span>100% financial transparency</span></li>
@@ -314,7 +315,11 @@
       const mainTitle = document.querySelector('.main-title');
       const heroTrees = document.querySelector('.hero-trees');
       const heroBuilding = document.querySelector('.hero-building');
-
+      const testimonial = document.querySelector('.testimonial-wrap');
+      const leftRemote = document.querySelector('.remodel-left');
+      const rightRemote = document.querySelector('.remodel-right');
+      const topHeader = document.querySelector('header');
+      const rightUl = document.querySelector('.right-ul');
       let scrollStep = 0; // Keeps track of animation steps
 
       const showElement = (element) => element.classList.add('visible');
@@ -325,14 +330,52 @@
           if (scrollStep === 0) {
             // Step 1: Show main title
             showElement(mainTitle);
+
             scrollStep++;
           } else if (scrollStep === 1) {
             // Step 2: Show trees and building
             showElement(heroTrees);
             showElement(heroBuilding);
+
             scrollStep++;
           }
+          else if (scrollStep === 2) {
+            // Step 2: Show trees and building
+            hideElement(mainTitle);
+            // hideElement(heroTrees);
+            // hideElement(heroBuilding);
+            testimonial.classList.add('stm');
+            heroBuilding.classList.add('hrmov');
+            heroTrees.classList.add('trmov');
+            scrollStep++;
+          }
+          else if (scrollStep === 3) {
+            // Step 2: Show trees and building
+            hideElement(mainTitle);
+            // hideElement(heroTrees);
+            // hideElement(heroBuilding);
+            topHeader.classList.add('show');
+            leftRemote.classList.add('show');
+            rightRemote.classList.add('show');
+            heroBuilding.classList.add('hrmov');
+            heroTrees.classList.add('trmov');
+            testimonial.classList.add('stm');
+            scrollStep++;
+          }
+          else if (scrollStep == 4) {
+            hideElement(mainTitle);
+            topHeader.classList.add('show');
+            rightUl.classList.add('show');
+            leftRemote.classList.add('off');
+            rightRemote.classList.add('off');
+            testimonial.classList.add('off');
+            hideElement(heroBuilding);
+            hideElement(heroTrees);
+            scrollStep++;
+          }
+
         } else if (direction === 'up') {
+
           if (scrollStep === 2) {
             // Step 2: Hide trees and building
             hideElement(heroTrees);

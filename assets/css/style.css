@@ -19,3 +19,95 @@ html {
 * {
     font-family: 'Trap';
 }
+
+.hero-building.hrmov {
+    transform: translate(216px, 82px);
+    transition: transform 1s ease-in-out;
+}
+
+.hero-trees.trmov {
+    transform: translate(200px, 60px);
+    transition: transform 1s ease-in-out;
+}
+
+.testimonial-wrap {
+
+    position: absolute;
+    bottom: -223px;
+    z-index: 111;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.testimonial-wrap.stm {
+    bottom: 50px;
+
+}
+
+.remodel-left {
+    position: absolute;
+    top: 90px;
+    left: -580px;
+    z-index: 111;
+    transition: left 0.5s ease-in-out;
+}
+
+.remodel-left.show {
+    left: 80px;
+}
+
+.remodel-right {
+    position: absolute;
+    top: 100px;
+    right: -880px;
+    z-index: 111;
+    transition: right 0.5s ease-in-out;
+}
+
+.remodel-right.show {
+    right: -200px;
+}
+
+header {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    transition: top 0.5s ease-in-out;
+    padding: 18px 0;
+}
+
+header.show {
+    top: 0;
+}
+
+.right-ul {
+    /* right: -900px; */
+    position: absolute;
+    top: 300px;
+    right: -900px;
+    z-index: 111;
+    transition: right 0.5s ease-in-out;
+}
+
+.right-ul.show {
+    right: 200px;
+}
+
+/* those who wants to hide */
+.remodel-left.off {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.remodel-right.off {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.testimonial-wrap.off {
+
+
+    bottom: -223px;
+    transition: bottom 0.5s ease-out;
+}
