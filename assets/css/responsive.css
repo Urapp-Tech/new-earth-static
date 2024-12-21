@@ -1,0 +1,50 @@
+@media screen and (max-width: 1600px) {
+    .remodel-wrap .row .left-context h2 {
+        font-size: 55px;
+        line-height: 64px;
+    }
+
+    .hero-wrapper .main-title h1.main-head {
+        font-size: 60px;
+        line-height: 70px;
+        max-width: 670px;
+    }
+
+    .sec-mobile-app .mobile-wrap.show {
+        bottom: 234px;
+    }
+
+    .sec-mobile-app .mobile-wrap {
+        max-width: 500px;
+        /* height: 708px; */
+    }
+
+    .mobile-wrap {
+        left: 212px;
+    }
+
+    .sec-mobile-app .row .mobile-content h2 {
+        font-size: 60px;
+        max-width: 480px;
+        line-height: 80px;
+        margin-bottom: 20px;
+
+    }
+
+    .sec-mobile-app .row .mobile-content .right-ul.show {
+        right: 330px;
+    }
+
+    .sec-mobile-app .row .mobile-content .right-ul {
+        top: 320px;
+    }
+
+    .sec-mobile-app .row .mobile-content ul li {
+        margin-bottom: 5px;
+    }
+
+    .sec-mobile-app .row .mobile-content ul li span {
+        font-size: 24px;
+        line-height: 32px;
+    }
+}

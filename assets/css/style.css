@@ -6,12 +6,13 @@
 @import url('process.css');
 @import url('scrollbg.css');
 @import url('lounge.css');
+@import url('responsive.css');
 
 body,
 html {
     margin: 0;
     padding: 0;
-    /* overflow: hidden; */
+    overflow: hidden;
     font-family: Arial, sans-serif;
     height: 100vh;
 }
@@ -20,8 +21,48 @@ html {
     font-family: 'Trap';
 }
 
+.logo-appear {
+    max-width: 300px;
+    height: 45px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 200px; */
+    transform: translateY(700%) scale(1);
+    z-index: 111;
+
+    transition: transform 0.5s ease, top 0.5s ease;
+
+    /* Smooth animation */
+}
+
+
+.logo-appear.show {
+    top: 20px;
+    transform: translateY(0);
+    /* Final top position */
+    transform: scale(0.8);
+    /* Shrink the logo */
+}
+
+.logo-appear img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.logo-appear.off {
+    top: -200px;
+}
+
 .hero-building.hrmov {
-    transform: translate(216px, 82px);
+    /* transform: translate(216px, 82px); */
+    transform: translate(124px, 8px);
     transition: transform 1s ease-in-out;
 }
 
@@ -39,7 +80,7 @@ html {
 }
 
 .testimonial-wrap.stm {
-    bottom: 50px;
+    bottom: 200px;
 
 }
 
@@ -58,7 +99,7 @@ html {
 .remodel-right {
     position: absolute;
     top: 100px;
-    right: -880px;
+    right: -990px;
     z-index: 111;
     transition: right 0.5s ease-in-out;
 }
@@ -84,14 +125,41 @@ header.show {
 .right-ul {
     /* right: -900px; */
     position: absolute;
-    top: 300px;
+    top: 450px;
     right: -900px;
     z-index: 111;
     transition: right 0.5s ease-in-out;
 }
 
 .right-ul.show {
+    /* right: 200px; */
+    right: 300px;
+}
+
+.right-heading {
+    position: absolute;
+    top: 150px;
     right: 200px;
+    z-index: 111;
+    transition: opacity 0.9s ease-in-out;
+    opacity: 0;
+}
+
+.right-heading.show {
+    opacity: 1;
+}
+
+.mobile-wrap {
+    position: absolute;
+    bottom: -555px;
+    left: 300px;
+    z-index: 111;
+    transition: bottom 1s ease-in-out;
+}
+
+.mobile-wrap.show {
+
+    bottom: 278px;
 }
 
 /* those who wants to hide */
@@ -110,4 +178,8 @@ header.show {
 
     bottom: -223px;
     transition: bottom 0.5s ease-out;
+}
+
+.logo-appear.gone {
+    opacity: 0;
 }
