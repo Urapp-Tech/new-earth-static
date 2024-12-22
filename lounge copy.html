@@ -4,13 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Office</title>
+  <title>Lounge</title>
   <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="Stylesheet" href="assets/css/style.css" />
 </head>
 
-<body class="is--bedroom">
+<body class="is--bedroom lounge">
 
   <header>
     <div class="container">
@@ -34,16 +34,20 @@
       </div>
     </div>
   </header>
-
+  <div class="zoom-transition" id="zoomEffect1"></div>
+  <div class="zoom-transition" id="zoomEffect2"></div>
+  <div class="zoom-transition" id="zoomEffect3"></div>
+  <div class="zoom-transition" id="zoomEffect4"></div>
   <div class="main-content">
+
     <div class="arrow-wrap">
-      <a href="lounge.html">
+      <a href="#">
         <img src="assets/images/icon/left-arrow.png" alt="icon" width="65" height="20">
       </a>
     </div>
     <div class="title-badge">
 
-      <h2>Office</h2>
+      <h2>Living room</h2>
       <p>Imagine starting your day in this inspiring environment.</p>
       <div class="extra-content">
         <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're investing in a more
@@ -53,18 +57,51 @@
       </div>
       <a class="read-btn" onclick="toggleContent()">read more <span>+</span></a>
     </div>
+    <div class="bed-btn">
+      <a href="bedroom.html" class="action-wraps" id="zoomButton" data-effect="zoomEffect1">
+        <span>bedroom</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+
+      </a>
+    </div>
+    <div class="bath-btn">
+      <a href="bathroom.html" class="action-wraps" id="zoomButton1" data-effect="zoomEffect2">
+        <span>bathroom</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+      </a>
+    </div>
+    <div class="kitchen-btn">
+      <a href="kitchen.html" class="action-wraps" id="zoomButton2" data-effect="zoomEffect3">
+        <span>kitchen</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+      </a>
+    </div>
+    <div class="office-btn">
+      <a href="office.html" class="action-wraps" id="zoomButton3" data-effect="zoomEffect4">
+        <span>office</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+      </a>
+    </div>
     <!-- Background Layers -->
     <div id="background-1" class="background active"
-      style="background-image: url('assets/images/office/office-1.webp');">
+      style="background-image: url('assets/images/lounge/lounge-1.webp');">
     </div>
-    <div id="background-2" class="background" style="background-image: url('assets/images/office/office-2.webp');">
+    <div id="background-2" class="background" style="background-image: url('assets/images/lounge/lounge-2.webp');">
     </div>
-    <div id="background-3" class="background" style="background-image: url('assets/images/office/office-3.webp');">
+    <div id="background-3" class="background" style="background-image: url('assets/images/lounge/lounge-3.webp');">
     </div>
 
     <!-- Next Button -->
     <button class="btn btn-primary next-btn" onclick="changeBackground()">
-      <img id="thumbnail" src="assets/images/office/office-1.webp" alt="Next Background Thumbnail">
+      <img id="thumbnail" src="assets/images/lounge/lounge-1.webp" alt="Next Background Thumbnail">
     </button>
   </div>
 
@@ -140,7 +177,7 @@
       const nextBackgroundIndex = currentBackground % totalBackgrounds + 1;
       const thumbnail = document.getElementById('thumbnail');
       // thumbnail.src = `../images/bed/bed-1.webp+${nextBackgroundIndex}`;
-      thumbnail.src = `assets/images/office/office-${nextBackgroundIndex}.webp`;
+      thumbnail.src = `assets/images/lounge/lounge-${nextBackgroundIndex}.webp`;
       thumbnail.alt = `Background ${nextBackgroundIndex}`;
     }
 
@@ -198,6 +235,68 @@
         readBtn.innerHTML = 'read less <span>-</span>';
       }
     }
+  </script>
+  <!-- <script>
+    const zoomButton = document.getElementById('zoomButton');
+    const zoomButton1 = document.getElementById('zoomButton1');
+    const zoomButton2 = document.getElementById('zoomButton2');
+    const zoomButton3 = document.getElementById('zoomButton3');
+    const zoomEffect = document.getElementById('zoomEffect');
+
+    zoomButton.addEventListener('click', function (event) {
+      event.preventDefault();
+      zoomEffect.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = zoomButton.getAttribute('href');
+      }, 1000); // Match this delay to the CSS transition duration
+    });
+    // for zoombtn1
+    zoomButton1.addEventListener('click', function (event) {
+      event.preventDefault();
+      zoomEffect.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = zoomButton1.getAttribute('href');
+      }, 1000); // Match this delay to the CSS transition duration
+    });
+    // for zoombtn2
+    zoomButton2.addEventListener('click', function (event) {
+      event.preventDefault();
+      zoomEffect.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = zoomButton2.getAttribute('href');
+      }, 1000); // Match this delay to the CSS transition duration
+    });
+    // for zoombtn3
+    zoomButton3.addEventListener('click', function (event) {
+      event.preventDefault();
+      zoomEffect.classList.add('active');
+
+      setTimeout(() => {
+        window.location.href = zoomButton3.getAttribute('href');
+      }, 1000); // Match this delay to the CSS transition duration
+    });
+  </script> -->
+  <script>
+    document.querySelectorAll('[id^="zoomButton"]').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const effectId = this.getAttribute('data-effect');
+        const zoomEffect = document.getElementById(effectId);
+
+        if (zoomEffect) {
+          zoomEffect.classList.add('active');
+
+          setTimeout(() => {
+            window.location.href = this.getAttribute('href');
+          }, 1000); // Match this delay to the CSS transition duration
+        }
+      });
+    });
+
   </script>
 </body>
 

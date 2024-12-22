@@ -92,13 +92,28 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('../images/bed/bed-1.webp');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     transform: scale(0);
     transition: transform 1s ease-in-out;
     z-index: 1111;
+}
+
+#zoomEffect1 {
+    background: url('../images/bed/bed-1.webp');
+}
+
+#zoomEffect2 {
+    background: url('../images/bathroom/bath-1.webp');
+}
+
+#zoomEffect3 {
+    background: url('../images/kitchen/kitchen-1.webp');
+}
+
+#zoomEffect4 {
+    background: url('../images/office/office-1.webp');
 }
 
 .zoom-transition.active {

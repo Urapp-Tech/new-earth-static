@@ -47,4 +47,82 @@
         font-size: 24px;
         line-height: 32px;
     }
+
+    /* lounge */
+    .is--bedroom header {
+        padding: 14px 0;
+    }
+
+    .lounge .bed-btn {
+        transform: translate(-210px, 90px);
+    }
+
+    .lounge .bath-btn {
+
+        transform: translate(34px, 90px);
+    }
+
+    .lounge .kitchen-btn {
+        transform: translate(268px, 90px);
+    }
+
+    .lounge .action-wraps span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .lounge .action-wraps {
+        padding: 8px 15px 6px;
+    }
+
+    .is--bedroom .footer {
+        min-height: 230px;
+        background-color: #333333b5;
+        padding: 2% 0 0;
+    }
+
+    .is--bedroom .footer .construction-wrap .cost-amount h5 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .is--bedroom .footer .construction-wrap .action-btn a {
+        padding: 9px 12px 5px;
+    }
+
+    .is--bedroom .footer .construction-wrap .action-btn {
+        margin: 24px 0 0;
+    }
+
+    .is--bedroom .footer .construction-wrap .cost-title span {
+        font-size: 12px;
+    }
+
+    .is--bedroom .title-badge {
+        max-width: 340px;
+        min-height: 250px;
+        padding: 25px;
+        z-index: 1111;
+    }
+
+    .is--bedroom .title-badge h2 {
+        font-size: 24px;
+        line-height: 39px;
+    }
+
+    .is--bedroom .title-badge p {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 0 15px;
+    }
+
+    .is--bedroom button.btn.btn-primary.next-btn {
+        top: auto;
+        bottom: 34px;
+    }
+
+    .is--bedroom .title-badge .read-btn {
+        padding: 7px 16px;
+        font-size: 14px;
+    }
 }

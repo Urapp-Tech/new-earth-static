@@ -12,7 +12,7 @@ body,
 html {
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     font-family: Arial, sans-serif;
     height: 100vh;
 }
@@ -47,6 +47,7 @@ html {
     /* Final top position */
     transform: scale(0.8);
     /* Shrink the logo */
+    opacity: 1;
 }
 
 .logo-appear img {
@@ -162,6 +163,10 @@ header.show {
     bottom: 278px;
 }
 
+.logo-appear.come {
+    opacity: 1;
+}
+
 /* those who wants to hide */
 .remodel-left.off {
     opacity: 0;
@@ -182,4 +187,11 @@ header.show {
 
 .logo-appear.gone {
     opacity: 0;
+}
+
+body.zoomed {
+    transform: scale(1.1);
+    /* Scale effect */
+    transition: transform 0.5s ease;
+    /* Smooth zoom transition */
 }
