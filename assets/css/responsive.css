@@ -77,8 +77,10 @@
 
     .is--bedroom .footer {
         min-height: 230px;
-        background-color: #333333b5;
+        /* background-color: #333333b5; */
         padding: 2% 0 0;
+        backdrop-filter: blur(5px);
+        background-color: #33333300;
     }
 
     .is--bedroom .footer .construction-wrap .cost-amount h5 {

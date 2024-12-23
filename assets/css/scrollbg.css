@@ -87,6 +87,8 @@ body {
     background-repeat: no-repeat; */
     background-color: #333333b5;
     padding: 4% 0 0;
+    backdrop-filter: blur(5px);
+    background-color: #33333300;
 }
 
 .is--bedroom .footer .construction-wrap {
@@ -220,7 +222,7 @@ body {
     position: absolute;
     top: 160px;
     left: 110px;
-    z-index: 11;
+    z-index: 1111;
     background-image: url('../images/bed/bed.png');
     background-position: center;
     background-repeat: no-repeat;

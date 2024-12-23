@@ -339,7 +339,7 @@
     });
   </script>
   <!-- perfect script for scroll up and down -->
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
       const logoAppear = document.querySelector('.logo-appear');
       const mainTitle = document.querySelector('.main-title');
@@ -448,8 +448,121 @@
       });
     });
 
-  </script>
+  </script> -->
 
+
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const logoAppear = document.querySelector('.logo-appear');
+      const mainTitle = document.querySelector('.main-title');
+      const heroTrees = document.querySelector('.hero-trees');
+      const heroBuilding = document.querySelector('.hero-building');
+      const testimonial = document.querySelector('.testimonial-wrap');
+      const leftRemote = document.querySelector('.remodel-left');
+      const rightRemote = document.querySelector('.remodel-right');
+      const topHeader = document.querySelector('header');
+      const rightUl = document.querySelector('.right-ul');
+      const rightHead = document.querySelector('.right-heading');
+      const mobileWrap = document.querySelector('.mobile-wrap');
+
+      let scrollStep = 0; // Keeps track of animation steps
+
+      const showElement = (element) => element.classList.add('visible');
+      const hideElement = (element) => element.classList.remove('visible');
+
+      const handleScroll = (direction) => {
+        if (direction === 'down') {
+          if (scrollStep === 0) {
+            showElement(mainTitle);
+            logoAppear.classList.add('show');
+            scrollStep++;
+          } else if (scrollStep === 1) {
+            showElement(heroTrees);
+            showElement(heroBuilding);
+            scrollStep++;
+          } else if (scrollStep === 2) {
+            hideElement(mainTitle);
+            logoAppear.classList.add('off');
+            topHeader.classList.add('show');
+            leftRemote.classList.add('show');
+            rightRemote.classList.add('show');
+            testimonial.classList.add('stm');
+            heroBuilding.classList.add('hrmov');
+            heroTrees.classList.add('trmov');
+            scrollStep++;
+          } else if (scrollStep === 3) {
+            topHeader.classList.add('show');
+            rightUl.classList.add('show');
+            rightHead.classList.add('show');
+            mobileWrap.classList.add('show');
+            leftRemote.classList.add('off');
+            rightRemote.classList.add('off');
+            testimonial.classList.add('off');
+            hideElement(heroBuilding);
+            hideElement(heroTrees);
+            scrollStep++;
+          } else if (scrollStep === 4) {
+            document.body.classList.add('zoomed');
+            setTimeout(() => {
+              window.location.href = 'lounge.html';
+            }, 500);
+            scrollStep++;
+          }
+        } else if (direction === 'up') {
+          if (scrollStep === 4) {
+            document.body.classList.remove('zoomed');
+            scrollStep--;
+          } else if (scrollStep === 3) {
+            topHeader.classList.remove('show');
+            rightUl.classList.remove('show');
+            rightHead.classList.remove('show');
+            mobileWrap.classList.remove('show');
+            leftRemote.classList.remove('off');
+            rightRemote.classList.remove('off');
+            testimonial.classList.remove('off');
+            showElement(heroBuilding);
+            showElement(heroTrees);
+            scrollStep--;
+          } else if (scrollStep === 2) {
+            hideElement(heroTrees);
+            hideElement(heroBuilding);
+            logoAppear.classList.remove('off');
+            topHeader.classList.remove('show');
+            leftRemote.classList.remove('show');
+            rightRemote.classList.remove('show');
+            testimonial.classList.remove('stm');
+            heroBuilding.classList.remove('hrmov');
+            heroTrees.classList.remove('trmov');
+            showElement(mainTitle);
+            scrollStep--;
+          } else if (scrollStep === 1) {
+            logoAppear.classList.remove('show');
+            hideElement(mainTitle);
+            scrollStep--;
+          }
+        }
+      };
+
+      window.addEventListener('wheel', (event) => {
+        const direction = event.deltaY > 0 ? 'down' : 'up';
+        handleScroll(direction);
+      });
+
+      let touchStartY = 0;
+
+      window.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0].clientY;
+      });
+
+      window.addEventListener('touchmove', (event) => {
+        const touchEndY = event.touches[0].clientY;
+        const direction = touchStartY - touchEndY > 0 ? 'down' : 'up';
+        handleScroll(direction);
+      });
+    });
+
+  </script>
 
 </body>
 
