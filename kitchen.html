@@ -171,14 +171,31 @@
       // Update the thumbnail
       updateThumbnail();
     }
+    // Throttle function to limit event triggering
+    function throttle(func, limit) {
+      let inThrottle;
+      return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => (inThrottle = false), limit);
+        }
+      };
+    }
+    // Throttled event listener for wheel scroll
+    window.addEventListener(
+      'wheel',
+      throttle((event) => {
+        if (event.deltaY > 0) {
+          changeBackground();
+        } else {
+          previousBackground();
+        }
+      }, 600) // Adjust delay as needed
+    );
 
-    window.addEventListener('wheel', (event) => {
-      if (event.deltaY > 0) {
-        changeBackground();
-      } else {
-        previousBackground();
-      }
-    });
 
     updateThumbnail();
 

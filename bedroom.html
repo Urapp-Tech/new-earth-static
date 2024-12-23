@@ -133,10 +133,10 @@
   <script>
     let currentBackground = 1;
     const totalBackgrounds = 3;
+
     function updateThumbnail() {
       const nextBackgroundIndex = currentBackground % totalBackgrounds + 1;
       const thumbnail = document.getElementById('thumbnail');
-      // thumbnail.src = `../images/bed/bed-1.webp+${nextBackgroundIndex}`;
       thumbnail.src = `assets/images/bed/bed-${nextBackgroundIndex}.webp`;
       thumbnail.alt = `Background ${nextBackgroundIndex}`;
     }
@@ -169,17 +169,36 @@
       updateThumbnail();
     }
 
-    window.addEventListener('wheel', (event) => {
-      if (event.deltaY > 0) {
-        changeBackground();
-      } else {
-        previousBackground();
-      }
-    });
+    // Throttle function to limit event triggering
+    function throttle(func, limit) {
+      let inThrottle;
+      return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => (inThrottle = false), limit);
+        }
+      };
+    }
 
+    // Throttled event listener for wheel scroll
+    window.addEventListener(
+      'wheel',
+      throttle((event) => {
+        if (event.deltaY > 0) {
+          changeBackground();
+        } else {
+          previousBackground();
+        }
+      }, 600) // Adjust delay as needed
+    );
+
+    // Initial setup
     updateThumbnail();
-
   </script>
+
   <script>
     function toggleContent() {
       const extraContent = document.querySelector('.extra-content');
