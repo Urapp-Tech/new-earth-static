@@ -4,6 +4,19 @@
         line-height: 64px;
     }
 
+    .remodel-left {
+        top: 90px;
+    }
+
+    .remodel-left.show {
+        left: 100px !important;
+
+    }
+
+    .remodel-right {
+        top: 100px;
+    }
+
     .hero-wrapper .main-title h1.main-head {
         font-size: 60px;
         line-height: 70px;

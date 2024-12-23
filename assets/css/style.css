@@ -86,19 +86,22 @@ body {
 
 .remodel-left {
     position: absolute;
-    top: 90px;
+    /* top: 90px; */
+    top: 150px;
     left: -580px;
     z-index: 111;
     transition: left 0.5s ease-in-out;
 }
 
 .remodel-left.show {
-    left: 80px;
+    /* left: 80px; */
+    left: 246px;
 }
 
 .remodel-right {
     position: absolute;
-    top: 100px;
+    /* top: 100px; */
+    top: 150px;
     right: -990px;
     z-index: 111;
     transition: right 0.5s ease-in-out;
@@ -189,7 +192,7 @@ header.show {
 }
 
 body.zoomed {
-    transform: scale(1.1);
+    transform: scale(1.2);
     /* Scale effect */
     transition: transform 0.5s ease;
     /* Smooth zoom transition */
