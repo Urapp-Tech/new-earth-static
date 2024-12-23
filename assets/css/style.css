@@ -80,8 +80,8 @@ body {
 }
 
 .testimonial-wrap.stm {
-    bottom: 200px;
-
+    /* bottom: 200px; */
+    bottom: 188px;
 }
 
 .remodel-left {
@@ -156,13 +156,17 @@ header.show {
     position: absolute;
     bottom: -555px;
     left: 300px;
+    left: 240px;
     z-index: 111;
     transition: bottom 1s ease-in-out;
+    /* top: auto; */
 }
 
 .mobile-wrap.show {
-
-    bottom: 278px;
+    height: 100vh;
+    /* bottom: 160px; */
+    bottom: 12%;
+    max-width: 34vw;
 }
 
 .logo-appear.come {

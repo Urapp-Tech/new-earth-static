@@ -41,20 +41,19 @@
         max-width: 670px;
     }
 
-    /* .sec-mobile-app .mobile-wrap.show {
+    .sec-mobile-app .mobile-wrap.show {
         bottom: 234px;
-    } */
+    }
 
     .sec-mobile-app .mobile-wrap {
-        /* max-width: 450px; */
         max-width: 500px;
         /* height: 708px; */
         left: 212px;
     }
 
-    /* .mobile-wrap {
+    .mobile-wrap {
         left: 212px;
-    } */
+    }
 
     .sec-mobile-app .row .mobile-content h2 {
         font-size: 60px;
@@ -182,23 +181,7 @@
         right: -150px;
     }
 
-    .sec-mobile-app .mobile-wrap.show {
-        max-width: 40vw;
-    }
 
-    .sec-mobile-app .mobile-wrap {
-
-        left: 50px;
-    }
-
-    .sec-mobile-app .row .mobile-content .right-ul.show {
-        right: 242px;
-    }
-
-    .sec-mobile-app .row .mobile-content .right-heading {
-
-        right: 100px;
-    }
 }
 
 @media screen and (max-width: 1260px) {

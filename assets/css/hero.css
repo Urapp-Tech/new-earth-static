@@ -49,7 +49,7 @@ body {
     right: 0;
     z-index: 1;
     max-width: 1512px;
-    height: 448px;
+    /* height: 448px; */
     animation: 1s ease-out 0.2s 1 slideInFromBottom;
 }
 
@@ -283,7 +283,7 @@ header .header-main .action-btn a {
 
 /* mobile wrap */
 .sec-mobile-app {
-    padding: 3% 0;
+    padding: 40px 0;
 }
 
 .sec-mobile-app .row {
@@ -342,8 +342,10 @@ header .header-main .action-btn a {
 }
 
 .sec-mobile-app .mobile-wrap {
-    max-width: 695px;
+    /* max-width: 695px; */
     /* height: 708px; */
+    max-width: 580px;
+
 }
 
 .sec-mobile-app .mobile-wrap img {
@@ -352,6 +354,3 @@ header .header-main .action-btn a {
     width: 100%;
     object-fit: contain;
 }
-
-
-/* Living room */
