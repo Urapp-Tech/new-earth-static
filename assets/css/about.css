@@ -239,12 +239,28 @@ section.research-banner .research-content p {
 
 .main-footer {
     min-height: 100%;
-    background-image: url('../images/about/footer.webp');
+    background-image: url('../images/hero-footer.png');
     background-position: bottom;
     background-size: cover;
     background-repeat: no-repeat;
     padding: 66px 0 0;
     flex: 1;
+    position: relative;
+}
+
+.main-footer::after {
+    content: '';
+    background: url('../images/footer-logo-ne.png');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 111;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: auto;
 }
 
 /* .main-footer::before {
