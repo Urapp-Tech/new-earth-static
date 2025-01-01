@@ -178,6 +178,11 @@
         min-height: 230px;
     }
 
+    .is--bedroom .lounge .office-btn {
+        top: -70px;
+        right: -90px;
+    }
+
     .is--bedroom .title-badge p {
         font-size: 12px;
         line-height: 15px;
