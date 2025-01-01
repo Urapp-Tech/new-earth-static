@@ -161,6 +161,15 @@
         font-size: 14px;
     }
 
+    .remodel-wrap .remodel-left,
+    .remodel-wrap .remodel-right {
+        top: 120px;
+    }
+
+    .remodel-wrap .row .left-context p {
+
+        margin-top: 15px;
+    }
 
 }
 
@@ -199,6 +208,19 @@
 
         right: 100px;
     }
+
+    .testimonial-wrap.stm {
+
+        bottom: 22%;
+    }
+
+    .testimonial-wrap .owl-carousel .item {
+        height: 174px;
+        padding: 25px 20px;
+    }
+
+
+
 }
 
 @media screen and (max-width: 1260px) {
