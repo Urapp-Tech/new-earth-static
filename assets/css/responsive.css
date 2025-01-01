@@ -238,6 +238,9 @@
         line-height: 29px;
     }
 
+    .sec-mobile-app .mobile-wrap.show {
+        max-width: 33vw;
+    }
 }
 
 @media screen and (max-width: 1260px) {
