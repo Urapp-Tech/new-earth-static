@@ -241,6 +241,34 @@
     .sec-mobile-app .mobile-wrap.show {
         max-width: 33vw;
     }
+
+    .lounge .bath-btn {
+        transform: translate(25px, 70px);
+    }
+
+    .lounge .kitchen-btn {
+        transform: translate(219px, 71px);
+    }
+
+    .lounge .bed-btn {
+        transform: translate(-178px, 70px);
+    }
+
+    .is--bedroom .title-badge {
+        max-width: 285px;
+        min-height: 215px;
+        padding: 15px;
+        z-index: 1111;
+        top: 125px;
+        left: 40px;
+    }
+
+    .is--bedroom .arrow-wrap {
+        position: absolute;
+        left: 40px;
+        top: 85px;
+        z-index: 11;
+    }
 }
 
 @media screen and (max-width: 1260px) {
