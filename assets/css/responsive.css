@@ -219,7 +219,24 @@
         padding: 25px 20px;
     }
 
+    .sec-mobile-app .row .mobile-content .right-ul {
+        top: 290px;
+    }
 
+    .sec-mobile-app .row .mobile-content h2 {
+        font-size: 50px;
+        line-height: 60px;
+        margin-bottom: 10px;
+    }
+
+    .sec-mobile-app .row .mobile-content ul li::before {
+        top: 4px;
+    }
+
+    .sec-mobile-app .row .mobile-content ul li span {
+        font-size: 22px;
+        line-height: 29px;
+    }
 
 }
 
