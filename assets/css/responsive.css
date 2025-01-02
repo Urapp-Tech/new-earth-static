@@ -178,9 +178,9 @@
         min-height: 230px;
     }
 
-    .is--bedroom .lounge .office-btn {
-        top: -70px;
-        right: -90px;
+    .lounge .office-btn {
+
+        transform: translate(-85px, 280px);
     }
 
     .is--bedroom .title-badge p {
@@ -218,7 +218,8 @@
 
     .sec-mobile-app .mobile-wrap {
 
-        left: 50px;
+        /* left: 50px; */
+        left: 130px;
     }
 
     .sec-mobile-app .row .mobile-content .right-ul.show {
@@ -230,7 +231,7 @@
         right: 100px;
     }
 
-    .testimonial-wrap.stm {
+    .hero-one .testimonial-wrap.stm {
 
         bottom: 22%;
     }
