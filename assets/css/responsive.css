@@ -231,9 +231,9 @@
         right: 100px;
     }
 
-    .hero-one .testimonial-wrap.stm {
+    .testimonial-wrap.stm {
 
-        bottom: 22%;
+        bottom: 22% !important;
     }
 
     .testimonial-wrap .owl-carousel .item {
