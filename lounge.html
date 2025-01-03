@@ -277,9 +277,11 @@
       'wheel',
       throttle((event) => {
         if (event.deltaY > 0) {
-          expandableFooter.classList.add('expanded');
+          // expandableFooter.classList.add('expanded');
+          changeBackground();
         } else {
-          expandableFooter.classList.remove('expanded');
+          // expandableFooter.classList.remove('expanded');
+          previousBackground();
         }
       }, 600) // Adjust delay as needed
     );
