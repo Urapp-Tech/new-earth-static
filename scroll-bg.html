@@ -14,11 +14,18 @@
 <body class="is--bedroom lounge is-mobile">
     <div class="cont-wrap">
         <div class="button-container">
-            <button class="lounge">Lounge</button>
-            <button class="bedroom">Bedroom</button>
-            <button class="bathroom">Bathroom</button>
-            <button class="kitchen">Kitchen</button>
-            <button class="office">Office</button>
+            <button class="lounge">
+                <label>Lounge</label>
+                <span class="btn-icons"><img src="assets/images/icon/lounge.png" alt="icons" width="25"
+                        height="25"></span></button>
+            <button class="bedroom"><label>Bedroom </label><span class="btn-icons"><img
+                        src="assets/images/icon/bedroom.png" alt="icons" width="25" height="25"></span></button>
+            <button class="bathroom"><label>Bathroom </label><span class="btn-icons"><img
+                        src="assets/images/icon/bathroom.png" alt="icons" width="25" height="25"></span></button>
+            <button class="kitchen"><label>Kitchen </label><span class="btn-icons"><img
+                        src="assets/images/icon/kitchen.png" alt="icons" width="25" height="25"></span></button>
+            <button class="office"><label>Office</label><span class="btn-icons"><img src="assets/images/icon/office.png"
+                        alt="icons" width="25" height="25"></span></button>
             <button class="llst"></button>
         </div>
 
@@ -529,8 +536,8 @@
 
         updateActiveState();
     </script> -->
-
-    <script>
+    <!-- this script is fine -->
+    <!-- <script>
         const buttons = document.querySelectorAll('.button-container button');
         const contWrap = document.querySelector('.cont-wrap');
         const titleBadges = document.querySelectorAll('.tite-badge');
@@ -656,8 +663,141 @@
 
         updateActiveState();
 
-    </script>
+    </script> -->
 
+    <!-- this script add due to touch -->
+    <script>
+        const buttons = document.querySelectorAll('.button-container button');
+        const contWrap = document.querySelector('.cont-wrap');
+        const titleBadges = document.querySelectorAll('.tite-badge');
+        const footerDiv = document.getElementById('footerDiv');
+        const officeButton = document.querySelector('.llst');
+        let currentIndex = 0;
+        let isScrolling = false;
+        let startY = 0; // Touch start position
+
+        // Throttling function to improve scroll performance
+        const throttle = (func, limit) => {
+            let lastFunc;
+            let lastRan;
+            return function () {
+                const context = this;
+                const args = arguments;
+                if (!lastRan) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                } else {
+                    clearTimeout(lastFunc);
+                    lastFunc = setTimeout(() => {
+                        if (Date.now() - lastRan >= limit) {
+                            func.apply(context, args);
+                            lastRan = Date.now();
+                        }
+                    }, limit - (Date.now() - lastRan));
+                }
+            };
+        };
+
+        // Update active state
+        const updateActiveState = () => {
+            buttons.forEach((button, index) => {
+                button.classList.toggle('active', index === currentIndex);
+            });
+
+            let backgroundImage = '';
+            switch (buttons[currentIndex]?.classList[0]) {
+                case 'bedroom':
+                    backgroundImage = 'url("assets/images/rooms/bed-1.png")';
+                    break;
+                case 'bathroom':
+                    backgroundImage = 'url("assets/images/rooms/bath.png")';
+                    break;
+                case 'kitchen':
+                    backgroundImage = 'url("assets/images/rooms/kitchen.png")';
+                    break;
+                case 'office':
+                    backgroundImage = 'url("assets/images/rooms/office.png")';
+                    break;
+                case 'llst':
+                    backgroundImage = 'url("assets/images/rooms/lounge-1.png")';
+                    break;
+                case 'lounge':
+                    backgroundImage = 'url("assets/images/rooms/lounge-1.png")';
+                    break;
+            }
+
+            contWrap.style.transition = 'background-image 0.5s ease';
+            contWrap.style.backgroundImage = backgroundImage;
+
+            titleBadges.forEach((badge) => badge.classList.remove('active'));
+            const activeBadge = document.querySelector(`.${buttons[currentIndex]?.classList[0]}-title`);
+            if (activeBadge) activeBadge.classList.add('active');
+        };
+
+        // Handle scroll (desktop)
+        const handleScroll = throttle((event) => {
+            if (isScrolling) return;
+            isScrolling = true;
+
+            if (event.deltaY > 0 && currentIndex < buttons.length - 1) {
+                currentIndex++;
+            } else if (event.deltaY < 0 && currentIndex > 0) {
+                currentIndex--;
+            }
+
+            footerDiv.classList.toggle('visible', buttons[currentIndex].classList.contains('llst'));
+            updateActiveState();
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 600);
+        }, 600);
+
+        // Handle touch (mobile)
+        const handleTouchStart = (event) => {
+            startY = event.touches[0].clientY;
+        };
+
+        const handleTouchMove = throttle((event) => {
+            if (isScrolling) return;
+            isScrolling = true;
+
+            const endY = event.touches[0].clientY;
+            const deltaY = startY - endY;
+
+            if (deltaY > 50 && currentIndex < buttons.length - 1) { // Swipe up
+                currentIndex++;
+            } else if (deltaY < -50 && currentIndex > 0) { // Swipe down
+                currentIndex--;
+            }
+
+            footerDiv.classList.toggle('visible', buttons[currentIndex].classList.contains('llst'));
+            updateActiveState();
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 600);
+        }, 600);
+
+        // Add event listeners
+        window.addEventListener('wheel', handleScroll); // Desktop scroll
+        window.addEventListener('touchstart', handleTouchStart); // Mobile touch start
+        window.addEventListener('touchmove', handleTouchMove); // Mobile touch move
+        const toggleContent = (button) => {
+            const badge = button.closest('.badge--box');
+            const extraContent = badge.querySelector('.extra-content');
+            const readBtn = badge.querySelector('.read-btn');
+
+            if (extraContent.classList.contains('open')) {
+                extraContent.classList.remove('open');
+                readBtn.innerHTML = 'read more <span>+</span>';
+            } else {
+                extraContent.classList.add('open');
+                readBtn.innerHTML = 'read less <span>-</span>';
+            }
+        };
+        updateActiveState();
+    </script>
 
 </body>
 

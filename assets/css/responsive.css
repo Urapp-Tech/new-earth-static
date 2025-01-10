@@ -3,6 +3,10 @@
     display: none;
 }
 
+.is-mobile button .btn-icons {
+    display: none;
+}
+
 @media screen and (max-width: 1600px) {
 
     /* .remodel-wrap .row .left-context h2 {
@@ -1137,7 +1141,10 @@
 
     button.llst {
         opacity: 0;
-        width: 1px !important;
+        width: 0px !important;
+        position: absolute;
+        right: 0;
+        top: 0;
     }
 
     /* specfific styles for screen 768 */
@@ -1428,5 +1435,94 @@
 
     .hor-tabs .nav-tabs {
         width: 800px;
+    }
+}
+
+@media screen and (max-width: 670px) {
+    .is-mobile button .btn-icons {
+        display: block;
+        max-width: 40px;
+        margin: auto;
+        width: 50px;
+    }
+
+    .is-mobile button label {
+        display: none;
+    }
+
+    .is-mobile button {
+        width: 70px;
+        height: 70px;
+        border-radius: 8px;
+        margin: auto;
+        padding: 0;
+    }
+
+    .is-mobile button .btn-icons img {
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    .is-mobile button.active img {
+        filter: invert(1);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .is-mobile button {
+        width: 50px;
+        height: 50px;
+        border-radius: 4px;
+        margin: auto;
+        padding: 0;
+    }
+
+    .is-mobile button .btn-icons {
+        display: block;
+        max-width: 35px;
+        margin: auto;
+        width: 50px;
+    }
+
+    .is-mobile .quotation-box .lenght span {
+        font-size: 22px;
+
+    }
+
+    .is-mobile .button-container {
+        gap: 0;
+
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .is-mobile .quotation-box {
+        min-height: 90px;
+
+    }
+
+    .is-mobile .quoation-grids {
+        gap: 10px;
+        flex-direction: column;
+    }
+
+    .is-mobile .badge--box h2 {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 22px;
+        color: #1e1e1e;
+        margin: 0;
+    }
+
+    .is-mobile .badge--box p {
+        font-size: 13px;
+        line-height: 17px;
+        font-weight: 400;
+        color: #1e1e1e;
+        text-align: center;
+        margin: 0 0 8px;
     }
 }
