@@ -20,6 +20,11 @@ body {
     font-family: 'Trap';
 }
 
+.container {
+    max-width: 1320px;
+    padding: 0 20px;
+}
+
 .logo-appear {
     max-width: 300px;
     height: 45px;

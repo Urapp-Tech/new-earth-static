@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Button Swap</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .cont-wrap {
+            margin: 0 auto;
+            padding: 50px 0;
+            max-width: 767px;
+            height: 100vh;
+            background-color: purple; /* Lounge page default */
+            transition: background-color 0.5s ease, background-image 0.5s ease;
+        }
+
+        .button-container {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        button {
+            width: 100px;
+			height: 30px;
+			font-size: 12px;
+			font-weight: bold;
+			font-family: 'trap';
+			line-height: 16px;
+			padding: 7px 20px;
+			border-radius: 20px;
+            border: none;
+            cursor: pointer;
+            background-color: white;
+            color: black;
+            transition: transform 0.5s linear, order 0.5s linear, background-color 0.5s linear, color 0.5s linear;
+        }
+
+        button.active {
+            background-color: black;
+            color: white;
+        }
+
+        /* Remove background images from buttons */
+        .bedroom, .bathroom, .kitchen, .office, .lounge {
+            background: none;
+        }
+
+        .description {
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            margin-top: 20px;
+            transition: opacity 0.5s ease;
+        }
+    </style>
+</head>
+<body class="">
+    <div class="cont-wrap">
+        <div class="button-container">
+            <button class="lounge">Lounge</button>
+            <button class="bedroom">Bedroom</button>
+            <button class="bathroom">Bathroom</button>
+            <button class="kitchen">Kitchen</button>
+            <button class="office">Office</button>
+        </div>
+
+        <div class="description">
+            <!-- Description will be updated dynamically -->
+            <p id="tabDescription">This is the Lounge tab</p>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll('button');
+        const contWrap = document.querySelector('.cont-wrap');
+        const description = document.getElementById('tabDescription');
+        let currentIndex = 0;
+
+        const updateActiveState = () => {
+            buttons.forEach((button, index) => {
+                button.classList.remove('active');
+                button.style.backgroundColor = 'white';
+                button.style.color = 'black';
+            });
+
+            const activeButton = buttons[currentIndex];
+            activeButton.classList.add('active');
+            activeButton.style.backgroundColor = 'black';
+            activeButton.style.color = 'white';
+
+            let backgroundImage = '';
+            let descText = '';
+            switch (activeButton.classList[0]) {
+                case 'bedroom':
+                    backgroundImage = 'url("bed-1.png")';
+                    descText = 'This is the Bedroom tab';
+                    break;
+                case 'bathroom':
+                    backgroundImage = 'url("bath.png")';
+                    descText = 'This is the Bathroom tab';
+                    break;
+                case 'kitchen':
+                    backgroundImage = 'url("kitchen.png")';
+                    descText = 'This is the Kitchen tab';
+                    break;
+                case 'office':
+                    backgroundImage = 'url("office.png")';
+                    descText = 'This is the Office tab';
+                    break;
+                case 'lounge':
+                    backgroundImage = 'url("lounge-1.png")';
+                    descText = 'This is the Lounge tab';
+                    break;
+            }
+
+            contWrap.style.backgroundImage = backgroundImage; // Set container background to the active button's image
+            contWrap.style.backgroundRepeat = "no-repeat";
+            contWrap.style.backgroundPosition = "center center";
+            contWrap.style.backgroundSize = "cover";
+
+            // Update the description text dynamically
+            description.style.opacity = '0';
+            setTimeout(() => {
+                description.innerHTML = `<p>${descText}</p>`;
+                description.style.opacity = '1';
+            }, 500); // Add a slight delay before changing text to animate opacity transition
+        };
+
+        window.addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) {
+                currentIndex = (currentIndex + 1) % buttons.length;
+            } else {
+                currentIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+            }
+            updateActiveState();
+        });
+
+        updateActiveState(); // Initialize the first active state
+    </script>
+</body>
+</html>

@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Button Swap</title>
+    <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
+    <link rel="Stylesheet" href="assets/css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+
+<body class="is--bedroom lounge is-mobile">
+    <div class="cont-wrap">
+        <div class="button-container">
+            <button class="lounge">Lounge</button>
+            <button class="bedroom">Bedroom</button>
+            <button class="bathroom">Bathroom</button>
+            <button class="kitchen">Kitchen</button>
+            <button class="office">Office</button>
+            <button class="llst"></button>
+        </div>
+
+        <!-- Title badges for each button -->
+        <div class="tite-badges">
+            <div class="tite-badge lounge-title active">
+                <!-- <h2>Lounge</h2>
+                <p>This is the Lounge tab.</p> -->
+                <div class="badge--box">
+                    <h2>Living room</h2>
+                    <p>Imagine starting your day in this inspiring environment.</p>
+                    <div class="extra-content">
+                        <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're
+                            investing in a more
+                            balanced, fulfilling life.</p>
+                        <p>Your living space shapes your daily experience. Choose one that nurtures your best self.</p>
+                        <p>How might it transform your mood, productivity, and relationships?</p>
+                    </div>
+                    <a class="read-btn" onclick="toggleContent(this)">read more <span>+</span></a>
+                </div>
+                <div class="quotes-module-wrap">
+                    <div class="quoation-grids">
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>COST</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>2m</span>
+                                <span>Pakistani Rupees (PKR)</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Area</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>25x20</span>
+                                <span>Square Yards</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Time</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>6 <label>weeks</label></span>
+                                <span>Working Days*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-survey">
+                        Book a Survey
+                    </a>
+                </div>
+
+            </div>
+            <div class="tite-badge bedroom-title">
+                <!-- <h2>Bedroom</h2>
+                <p>This is the Bedroom tab.</p> -->
+                <div class="badge--box">
+                    <h2>Bedroom</h2>
+                    <p>Imagine starting your day in this inspiring environment.</p>
+                    <div class="extra-content">
+                        <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're
+                            investing in a more
+                            balanced, fulfilling life.</p>
+                        <p>Your living space shapes your daily experience. Choose one that nurtures your best self.</p>
+                        <p>How might it transform your mood, productivity, and relationships?</p>
+                    </div>
+                    <a class="read-btn" onclick="toggleContent(this)">read more <span>+</span></a>
+                </div>
+                <div class="quotes-module-wrap">
+                    <div class="quoation-grids">
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>COST</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>2m</span>
+                                <span>Pakistani Rupees (PKR)</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Area</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>25x20</span>
+                                <span>Square Yards</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Time</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>6 <label>weeks</label></span>
+                                <span>Working Days*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-survey">
+                        Book a Survey
+                    </a>
+                </div>
+            </div>
+            <div class="tite-badge bathroom-title">
+                <!-- <h2>Bathroom</h2>
+                <p>This is the Bathroom tab.</p> -->
+                <div class="badge--box">
+                    <h2>Bathroom</h2>
+                    <p>Imagine starting your day in this inspiring environment.</p>
+                    <div class="extra-content">
+                        <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're
+                            investing in a more
+                            balanced, fulfilling life.</p>
+                        <p>Your living space shapes your daily experience. Choose one that nurtures your best self.</p>
+                        <p>How might it transform your mood, productivity, and relationships?</p>
+                    </div>
+                    <a class="read-btn" onclick="toggleContent(this)">read more <span>+</span></a>
+                </div>
+                <div class="quotes-module-wrap">
+                    <div class="quoation-grids">
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>COST</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>2m</span>
+                                <span>Pakistani Rupees (PKR)</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Area</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>25x20</span>
+                                <span>Square Yards</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Time</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>6 <label>weeks</label></span>
+                                <span>Working Days*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-survey">
+                        Book a Survey
+                    </a>
+                </div>
+            </div>
+            <div class="tite-badge kitchen-title">
+                <!-- <h2>Kitchen</h2>
+                <p>This is the Kitchen tab.</p> -->
+                <div class="badge--box">
+                    <h2>Kitchen</h2>
+                    <p>Imagine starting your day in this inspiring environment.</p>
+                    <div class="extra-content">
+                        <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're
+                            investing in a more
+                            balanced, fulfilling life.</p>
+                        <p>Your living space shapes your daily experience. Choose one that nurtures your best self.</p>
+                        <p>How might it transform your mood, productivity, and relationships?</p>
+                    </div>
+                    <a class="read-btn" onclick="toggleContent(this)">read more <span>+</span></a>
+                </div>
+                <div class="quotes-module-wrap">
+                    <div class="quoation-grids">
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>COST</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>2m</span>
+                                <span>Pakistani Rupees (PKR)</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Area</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>25x20</span>
+                                <span>Square Yards</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Time</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>6 <label>weeks</label></span>
+                                <span>Working Days*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-survey">
+                        Book a Survey
+                    </a>
+                </div>
+            </div>
+            <div class="tite-badge office-title">
+                <div class="badge--box">
+                    <h2>Office</h2>
+                    <p>Imagine starting your day in this inspiring environment.</p>
+                    <div class="extra-content">
+                        <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're
+                            investing in a more
+                            balanced, fulfilling life.</p>
+                        <p>Your living space shapes your daily experience. Choose one that nurtures your best self.</p>
+                        <p>How might it transform your mood, productivity, and relationships?</p>
+                    </div>
+                    <a class="read-btn" onclick="toggleContent(this)">read more <span>+</span></a>
+                </div>
+
+                <div class="quotes-module-wrap">
+                    <div class="quoation-grids">
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>COST</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>2m</span>
+                                <span>Pakistani Rupees (PKR)</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Area</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>25x20</span>
+                                <span>Square Yards</span>
+                            </div>
+                        </div>
+                        <div class="quotation-box">
+                            <div class="cost">
+                                <span>Time</span>
+                                <img src="assets/images/icon/error.png" alt="icon" width="12" height="12">
+                            </div>
+                            <div class="lenght">
+                                <span>6 <label>weeks</label></span>
+                                <span>Working Days*</span>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#" class="btn-survey">
+                        Book a Survey
+                    </a>
+                </div>
+
+            </div>
+            <div id="footerDiv" class="foot">
+                <div class="footer-content">
+                    <div class="footer-wrap">
+                        <a href="home.html">
+                            <div class="footer-logo">
+                                <img src="assets/images/logo-white.png" alt="logo" width="164" height="30">
+                            </div>
+                        </a>
+
+                        <div class="footer-nav">
+                            <ul>
+                                <li>
+                                    <a href="about-us.html">About us</a>
+                                </li>
+                                <li>
+                                    <a href="career.html">Careers</a>
+                                </li>
+                                <li>
+                                    <a href="process-two.html">Process</a>
+                                </li>
+                                <li>
+                                    <div class="social-wrap">
+                                        <a href="#">Follow us</a>
+                                        <ul class="social-icons">
+                                            <li>
+                                                <a href="#">
+                                                    <img src="assets/images/icon/fb.svg" alt="social" width="24"
+                                                        height="24">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="assets/images/icon/instagram.svg" alt="social" width="24"
+                                                        height="24">
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#">
+                                                    <img src="assets/images/icon/twitter.svg" alt="social" width="24"
+                                                        height="24">
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- <script>
+        const buttons = document.querySelectorAll('button');
+        const contWrap = document.querySelector('.cont-wrap');
+        const titleBadges = document.querySelectorAll('.tite-badge');
+        let currentIndex = 0;
+
+        const updateActiveState = () => {
+            // Update button states
+            buttons.forEach((button, index) => {
+                button.classList.remove('active');
+                button.style.backgroundColor = 'rgba(255, 255, 255, 0.4)';
+                button.style.color = 'black';
+            });
+
+            const activeButton = buttons[currentIndex];
+            activeButton.classList.add('active');
+            activeButton.style.backgroundColor = 'rgba(0, 0, 0, 0.4)';
+            activeButton.style.color = 'white';
+
+            // Update container background and description
+            let backgroundImage = '';
+            switch (activeButton.classList[0]) {
+                case 'bedroom':
+                    backgroundImage = 'url("assets/images/rooms/bed-1.png")';
+                    break;
+                case 'bathroom':
+                    backgroundImage = 'url("assets/images/rooms/bath.png")';
+                    break;
+                case 'kitchen':
+                    backgroundImage = 'url("assets/images/rooms/kitchen.png")';
+                    break;
+                case 'office':
+                    backgroundImage = 'url("assets/images/rooms/office.png")';
+                    break;
+                case 'lounge':
+                    backgroundImage = 'url("assets/images/rooms/lounge-1.png")';
+                    break;
+            }
+
+            contWrap.style.backgroundImage = backgroundImage;
+            contWrap.style.backgroundRepeat = "no-repeat";
+            contWrap.style.backgroundPosition = "center center";
+            contWrap.style.backgroundSize = "cover";
+
+            // Update visibility of title badges
+            titleBadges.forEach((badge) => badge.classList.remove('active'));
+            const activeBadge = document.querySelector(`.${activeButton.classList[0]}-title`);
+            if (activeBadge) activeBadge.classList.add('active');
+        };
+
+        window.addEventListener('wheel', (event) => {
+            if (event.deltaY > 0) {
+                currentIndex = (currentIndex + 1) % buttons.length;
+            } else {
+                currentIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+            }
+            updateActiveState();
+        });
+
+        updateActiveState(); // Initialize the first active state
+    </script>
+    <script>
+        function toggleContent() {
+            const extraContent = document.querySelector('.extra-content');
+            const readBtn = document.querySelector('.read-btn');
+
+            if (extraContent.classList.contains('open')) {
+                extraContent.classList.remove('open');
+                readBtn.classList.remove('open');
+                readBtn.innerHTML = 'read more <span>+</span>';
+            } else {
+                extraContent.classList.add('open');
+                readBtn.classList.add('open');
+                readBtn.innerHTML = 'read less <span>-</span>';
+            }
+        }
+    </script> -->
+
+    <!-- <script>
+        const buttons = document.querySelectorAll('.button-container button');
+        const contWrap = document.querySelector('.cont-wrap');
+        const titleBadges = document.querySelectorAll('.tite-badge');
+        let currentIndex = 0;
+
+        const updateActiveState = () => {
+            buttons.forEach((button, index) => {
+                button.classList.remove('active');
+            });
+
+            const activeButton = buttons[currentIndex];
+            activeButton.classList.add('active');
+
+            let backgroundImage = '';
+            switch (activeButton.classList[0]) {
+                case 'bedroom':
+                    backgroundImage = 'url("assets/images/rooms/bed-1.png")';
+                    break;
+                case 'bathroom':
+                    backgroundImage = 'url("assets/images/rooms/bath.png")';
+                    break;
+                case 'kitchen':
+                    backgroundImage = 'url("assets/images/rooms/kitchen.png")';
+                    break;
+                case 'office':
+                    backgroundImage = 'url("assets/images/rooms/office.png")';
+                    break;
+                case 'lounge':
+                    backgroundImage = 'url("assets/images/rooms/lounge-1.png")';
+                    break;
+            }
+
+            contWrap.style.backgroundImage = backgroundImage;
+
+            titleBadges.forEach((badge) => badge.classList.remove('active'));
+            const activeBadge = document.querySelector(`.${activeButton.classList[0]}-title`);
+            if (activeBadge) activeBadge.classList.add('active');
+        };
+
+        const throttle = (func, limit) => {
+            let lastFunc;
+            let lastRan;
+            return function () {
+                const context = this;
+                const args = arguments;
+                if (!lastRan) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                } else {
+                    clearTimeout(lastFunc);
+                    lastFunc = setTimeout(() => {
+                        if (Date.now() - lastRan >= limit) {
+                            func.apply(context, args);
+                            lastRan = Date.now();
+                        }
+                    }, limit - (Date.now() - lastRan));
+                }
+            };
+        };
+
+        window.addEventListener(
+            'wheel',
+            throttle((event) => {
+                if (event.deltaY > 0) {
+                    currentIndex = (currentIndex + 1) % buttons.length;
+                } else {
+                    currentIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+                }
+                updateActiveState();
+            }, 600)
+        );
+
+        let startY = 0;
+        window.addEventListener('touchstart', (event) => {
+            startY = event.touches[0].clientY;
+        });
+
+        window.addEventListener(
+            'touchmove',
+            throttle((event) => {
+                const endY = event.touches[0].clientY;
+                if (startY - endY > 50) {
+                    currentIndex = (currentIndex + 1) % buttons.length;
+                } else if (endY - startY > 50) {
+                    currentIndex = (currentIndex - 1 + buttons.length) % buttons.length;
+                }
+                updateActiveState();
+            }, 600)
+        );
+
+        const toggleContent = (button) => {
+            const badge = button.closest('.badge--box');
+            const extraContent = badge.querySelector('.extra-content');
+            const readBtn = badge.querySelector('.read-btn');
+
+            if (extraContent.classList.contains('open')) {
+                extraContent.classList.remove('open');
+                readBtn.innerHTML = 'read more <span>+</span>';
+            } else {
+                extraContent.classList.add('open');
+                readBtn.innerHTML = 'read less <span>-</span>';
+            }
+        };
+
+        updateActiveState();
+    </script> -->
+
+    <script>
+        const buttons = document.querySelectorAll('.button-container button');
+        const contWrap = document.querySelector('.cont-wrap');
+        const titleBadges = document.querySelectorAll('.tite-badge');
+        const footerDiv = document.getElementById('footerDiv');
+        const officeButton = document.querySelector('.llst'); // Add reference to office button 
+        let currentIndex = 0;
+        let isScrolling = false;
+
+        // Throttling function to improve scroll performance
+        const throttle = (func, limit) => {
+            let lastFunc;
+            let lastRan;
+            return function () {
+                const context = this;
+                const args = arguments;
+                if (!lastRan) {
+                    func.apply(context, args);
+                    lastRan = Date.now();
+                } else {
+                    clearTimeout(lastFunc);
+                    lastFunc = setTimeout(() => {
+                        if (Date.now() - lastRan >= limit) {
+                            func.apply(context, args);
+                            lastRan = Date.now();
+                        }
+                    }, limit - (Date.now() - lastRan));
+                }
+            };
+        };
+
+        // Update active state
+        const updateActiveState = () => {
+            buttons.forEach((button, index) => {
+                button.classList.toggle('active', index === currentIndex);
+            });
+
+            let backgroundImage = '';
+            switch (buttons[currentIndex]?.classList[0]) {
+                case 'bedroom':
+                    backgroundImage = 'url("assets/images/rooms/bed-1.png")';
+                    break;
+                case 'bathroom':
+                    backgroundImage = 'url("assets/images/rooms/bath.png")';
+                    break;
+                case 'kitchen':
+                    backgroundImage = 'url("assets/images/rooms/kitchen.png")';
+                    break;
+                case 'office':
+                    backgroundImage = 'url("assets/images/rooms/office.png")';
+                    break;
+                case 'llst':
+                    backgroundImage = 'url("assets/images/rooms/lounge-1.png")';
+                    break;
+                case 'lounge':
+                    backgroundImage = 'url("assets/images/rooms/lounge-1.png")';
+                    break;
+            }
+
+            contWrap.style.transition = 'background-image 0.5s ease';
+            contWrap.style.backgroundImage = backgroundImage;
+
+            titleBadges.forEach((badge) => badge.classList.remove('active'));
+            const activeBadge = document.querySelector(`.${buttons[currentIndex]?.classList[0]}-title`);
+            if (activeBadge) activeBadge.classList.add('active');
+        };
+
+        // Handle scroll
+        const handleScroll = throttle((event) => {
+            if (isScrolling) return;
+            isScrolling = true;
+
+            // Scroll down
+            if (event.deltaY > 0) {
+                if (currentIndex < buttons.length - 1) {
+                    currentIndex++;
+                }
+
+                // Show footer after scrolling past the `.office` section
+                if (buttons[currentIndex].classList.contains('llst')) {
+                    footerDiv.classList.add('visible');
+                }
+            } else { // Scroll up
+                if (currentIndex > 0) {
+                    currentIndex--;
+                }
+
+                // Hide footer when scrolling up from `.office`
+                if (!buttons[currentIndex].classList.contains('llst')) {
+                    footerDiv.classList.remove('visible');
+                }
+            }
+
+            updateActiveState();
+
+            setTimeout(() => {
+                isScrolling = false;
+            }, 600);
+        }, 600);
+
+        // Throttled event listener for wheel scroll
+        window.addEventListener('wheel', throttle((event) => {
+            if (event.deltaY > 0) {
+                footerDiv.classList.remove('expanded');
+            } else {
+                footerDiv.classList.add('expanded');
+            }
+        }, 600));
+
+        window.addEventListener('wheel', handleScroll);
+        const toggleContent = (button) => {
+            const badge = button.closest('.badge--box');
+            const extraContent = badge.querySelector('.extra-content');
+            const readBtn = badge.querySelector('.read-btn');
+
+            if (extraContent.classList.contains('open')) {
+                extraContent.classList.remove('open');
+                readBtn.innerHTML = 'read more <span>+</span>';
+            } else {
+                extraContent.classList.add('open');
+                readBtn.innerHTML = 'read less <span>-</span>';
+            }
+        };
+
+        updateActiveState();
+
+    </script>
+
+
+</body>
+
+</html>
