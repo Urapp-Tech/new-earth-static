@@ -217,6 +217,28 @@
       }
     }
   </script>
+  <script>
+    function handleViewportChange() {
+      const viewportWidth = window.innerWidth;
+
+      // Check if viewport width is less than or equal to 767.98px
+      if (viewportWidth <= 767.98) {
+        // Redirect to another page if not already on that page
+        if (window.location.pathname !== 'scroll-bg.html') {
+          window.location.href = 'scroll-bg.html';
+        }
+      } else {
+        // Do nothing if it's 768px or more
+      }
+    }
+
+    // Initial check when the page loads
+    handleViewportChange();
+
+    // Add an event listener for viewport size changes
+    window.addEventListener('resize', handleViewportChange);
+
+  </script>
 </body>
 
 </html>

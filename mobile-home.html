@@ -17,7 +17,7 @@
 
 </head>
 
-<body>
+<body class="is-mobile-home">
 
   <section class="hero-one ">
     <div class="container-fluid px-0">
@@ -91,7 +91,7 @@
     <!-- owl carousel -->
     <div class="testimonial-wrap">
       <div class="carousel-container">
-        <div class="owl-carousel owl-theme">
+        <div class="owl-carousel owl-theme owl-vert">
           <div class="item">
             <div class="testimonial-box">
               <div class="t-context">
@@ -248,6 +248,12 @@
             </div>
 
           </div>
+          <div class="col-12 btn-trnas">
+            <a href="" class="btn--act">
+              Transform
+            </a>
+
+          </div>
         </div>
       </div>
 
@@ -277,37 +283,14 @@
               </ul>
             </div>
           </div>
+          <div class="col-12 btn-mobile">
+            <img src="assets/images/wrap-mobile.png" alt="mobile">
+
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- living room -->
-    <!-- <div class="mobile-wrapper">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-6">
-            <div class="mobile-cover">
-              <img src="assets/images/mobile-jab.png" alt="mobile" width="695" height="708">
-            </div>
-          </div>
-          <div class="col-sm-6">
-            <div class="mobile-app-description">
-              <h2 class="mobile-title-right">mobile app coming soon</h2>
-              <ul class="right-description">
-                <li><span>100% project visibility </span></li>
-                <li><span>Daily project tracking</span></li>
-                <li><span>100% financial transparency</span></li>
-                <li><span>In-App product selection</span></li>
-                <li><span>Product warranty Booklet</span></li>
-                <li><span>after sales service</span></li>
-                <li><span>Online payment options</span></li>
-
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div> -->
 
 
 
@@ -337,17 +320,19 @@
         loop: true,            // Infinite loop
         margin: 10,            // Space between items
         nav: false,
-        dots: false,            // Show navigation arrows
-        autoplay: false,        // Auto play the slides
+        dots: false,
+        autoplay: false,      // Show navigation arrows
+        // Auto play the slides
         autoplayTimeout: 3000, // Delay between slides (2 seconds)
+
         // stagePadding: 50,
         responsive: {
           0: {
-            items: 1 // 1 item for small screens
+            items: 3 // 1 item for small screens
           },
-          600: {
-            items: 2, // 2 items for medium screens
-            dots: true
+          767: {
+            items: 3, // 2 items for medium screens
+            autoplay: true,
           },
           1000: {
             items: 3 // 3 items for large screens
@@ -357,8 +342,11 @@
           }
         }
       });
+
+
     });
   </script>
+
 
   <script>
     window.addEventListener('load', () => {
@@ -375,278 +363,6 @@
   </script>
 
 
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const logoAppear = document.querySelector('.logo-appear');
-      const mainTitle = document.querySelector('.main-title');
-      const heroTrees = document.querySelector('.hero-trees');
-      const heroBuilding = document.querySelector('.hero-building');
-      const testimonial = document.querySelector('.testimonial-wrap');
-      const leftRemote = document.querySelector('.remodel-left');
-      const rightRemote = document.querySelector('.remodel-right');
-      const topHeader = document.querySelector('header');
-      const rightUl = document.querySelector('.right-ul');
-      const rightHead = document.querySelector('.right-heading');
-      const mobileWrap = document.querySelector('.mobile-wrap');
-
-      let scrollStep = 0; // Keeps track of animation steps
-      let isScrolling = false; // Prevents multiple triggers
-
-      const showElement = (element) => element.classList.add('visible');
-      const hideElement = (element) => element.classList.remove('visible');
-
-      const handleScroll = (direction) => {
-        if (isScrolling) return; // Prevent multiple triggers
-        isScrolling = true;
-
-        setTimeout(() => {
-          isScrolling = false;
-        }, 1000); // Adjust delay for debounce effect
-
-        if (direction === 'down') {
-          if (scrollStep === 0) {
-            showElement(mainTitle);
-            logoAppear.classList.add('show');
-            scrollStep++;
-          } else if (scrollStep === 1) {
-            showElement(heroTrees);
-            showElement(heroBuilding);
-            scrollStep++;
-          } else if (scrollStep === 2) {
-            hideElement(mainTitle);
-            logoAppear.classList.add('off');
-            topHeader.classList.add('show');
-            leftRemote.classList.add('show');
-            rightRemote.classList.add('show');
-            testimonial.classList.add('stm');
-            heroBuilding.classList.add('hrmov');
-            heroTrees.classList.add('trmov');
-            scrollStep++;
-          } else if (scrollStep === 3) {
-            topHeader.classList.add('show');
-            rightUl.classList.add('show');
-            rightHead.classList.add('show');
-            mobileWrap.classList.add('show');
-            leftRemote.classList.add('off');
-            rightRemote.classList.add('off');
-            testimonial.classList.add('off');
-            hideElement(heroBuilding);
-            hideElement(heroTrees);
-            scrollStep++;
-          } else if (scrollStep === 4) {
-            document.body.classList.add('zoomed');
-            setTimeout(() => {
-              window.location.href = 'lounge.html';
-            }, 1000);
-            scrollStep++;
-          }
-        } else if (direction === 'up') {
-          if (scrollStep === 4) {
-            document.body.classList.remove('zoomed');
-            scrollStep--;
-          } else if (scrollStep === 3) {
-            topHeader.classList.remove('show');
-            rightUl.classList.remove('show');
-            rightHead.classList.remove('show');
-            mobileWrap.classList.remove('show');
-            leftRemote.classList.remove('off');
-            rightRemote.classList.remove('off');
-            testimonial.classList.remove('off');
-            showElement(heroBuilding);
-            showElement(heroTrees);
-            scrollStep--;
-          } else if (scrollStep === 2) {
-            hideElement(heroTrees);
-            hideElement(heroBuilding);
-            logoAppear.classList.remove('off');
-            topHeader.classList.remove('show');
-            leftRemote.classList.remove('show');
-            rightRemote.classList.remove('show');
-            testimonial.classList.remove('stm');
-            heroBuilding.classList.remove('hrmov');
-            heroTrees.classList.remove('trmov');
-            showElement(mainTitle);
-            scrollStep--;
-          } else if (scrollStep === 1) {
-            logoAppear.classList.remove('show');
-            hideElement(mainTitle);
-            scrollStep--;
-          }
-        }
-      };
-
-      const throttle = (func, limit) => {
-        let inThrottle;
-        return function () {
-          const args = arguments;
-          const context = this;
-          if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => (inThrottle = false), limit);
-          }
-        };
-      };
-
-      const onWheel = throttle((event) => {
-        const direction = event.deltaY > 0 ? 'down' : 'up';
-        handleScroll(direction);
-      }, 300); // Adjust delay for smoothness
-
-
-      window.addEventListener('wheel', onWheel);
-
-      let touchStartY = 0;
-
-      window.addEventListener('touchstart', (event) => {
-        touchStartY = event.touches[0].clientY;
-      });
-
-      window.addEventListener('touchmove', throttle((event) => {
-        const touchEndY = event.touches[0].clientY;
-        const direction = touchStartY - touchEndY > 0 ? 'down' : 'up';
-        handleScroll(direction);
-      }, 300));
-    });
-  </script> -->
-  <!-- perfect script for slider -->
-  <!-- <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const logoAppear = document.querySelector('.logo-appear');
-      const mainTitle = document.querySelector('.main-title');
-      const heroTrees = document.querySelector('.hero-trees');
-      const heroBuilding = document.querySelector('.hero-building');
-      const testimonial = document.querySelector('.testimonial-wrap');
-      const leftRemote = document.querySelector('.remodel-left');
-      const rightRemote = document.querySelector('.remodel-right');
-      const topHeader = document.querySelector('header');
-      const rightUl = document.querySelector('.right-ul');
-      const rightHead = document.querySelector('.right-heading');
-      const mobileWrap = document.querySelector('.mobile-wrap');
-      const slider = document.querySelector('.owl-carousel'); // Add your slider selector here
-
-      let scrollStep = 0;
-      let isScrolling = false;
-
-      const showElement = (element) => element.classList.add('visible');
-      const hideElement = (element) => element.classList.remove('visible');
-
-      const handleScroll = (direction) => {
-        if (isScrolling) return;
-        isScrolling = true;
-
-        setTimeout(() => {
-          isScrolling = false;
-        }, 1000);
-
-        if (direction === 'down') {
-          if (scrollStep === 0) {
-            showElement(mainTitle);
-            logoAppear.classList.add('show');
-            scrollStep++;
-          } else if (scrollStep === 1) {
-            showElement(heroTrees);
-            showElement(heroBuilding);
-            scrollStep++;
-          } else if (scrollStep === 2) {
-            hideElement(mainTitle);
-            logoAppear.classList.add('off');
-            topHeader.classList.add('show');
-            leftRemote.classList.add('show');
-            rightRemote.classList.add('show');
-            testimonial.classList.add('stm');
-            heroBuilding.classList.add('hrmov');
-            heroTrees.classList.add('trmov');
-            scrollStep++;
-          } else if (scrollStep === 3) {
-            topHeader.classList.add('show');
-            rightUl.classList.add('show');
-            rightHead.classList.add('show');
-            mobileWrap.classList.add('show');
-            leftRemote.classList.add('off');
-            rightRemote.classList.add('off');
-            testimonial.classList.add('off');
-            hideElement(heroBuilding);
-            hideElement(heroTrees);
-            scrollStep++;
-          } else if (scrollStep === 4) {
-            document.body.classList.add('zoomed');
-            setTimeout(() => {
-              window.location.href = 'lounge.html';
-            }, 1000);
-            scrollStep++;
-          }
-        } else if (direction === 'up') {
-          if (scrollStep === 4) {
-            document.body.classList.remove('zoomed');
-            scrollStep--;
-          } else if (scrollStep === 3) {
-            topHeader.classList.remove('show');
-            rightUl.classList.remove('show');
-            rightHead.classList.remove('show');
-            mobileWrap.classList.remove('show');
-            leftRemote.classList.remove('off');
-            rightRemote.classList.remove('off');
-            testimonial.classList.remove('off');
-            showElement(heroBuilding);
-            showElement(heroTrees);
-            scrollStep--;
-          } else if (scrollStep === 2) {
-            hideElement(heroTrees);
-            hideElement(heroBuilding);
-            logoAppear.classList.remove('off');
-            topHeader.classList.remove('show');
-            leftRemote.classList.remove('show');
-            rightRemote.classList.remove('show');
-            testimonial.classList.remove('stm');
-            heroBuilding.classList.remove('hrmov');
-            heroTrees.classList.remove('trmov');
-            showElement(mainTitle);
-            scrollStep--;
-          } else if (scrollStep === 1) {
-            logoAppear.classList.remove('show');
-            hideElement(mainTitle);
-            scrollStep--;
-          }
-        }
-      };
-
-      const throttle = (func, limit) => {
-        let inThrottle;
-        return function () {
-          const args = arguments;
-          const context = this;
-          if (!inThrottle) {
-            func.apply(context, args);
-            inThrottle = true;
-            setTimeout(() => (inThrottle = false), limit);
-          }
-        };
-      };
-
-      const onWheel = throttle((event) => {
-        if (slider.contains(event.target)) return; // Skip scroll handling if inside slider
-        const direction = event.deltaY > 0 ? 'down' : 'up';
-        handleScroll(direction);
-      }, 300);
-
-      window.addEventListener('wheel', onWheel);
-
-      let touchStartY = 0;
-
-      window.addEventListener('touchstart', (event) => {
-        touchStartY = event.touches[0].clientY;
-      });
-
-      window.addEventListener('touchmove', throttle((event) => {
-        if (slider.contains(event.target)) return; // Skip touch handling if inside slider
-        const touchEndY = event.touches[0].clientY;
-        const direction = touchStartY - touchEndY > 0 ? 'down' : 'up';
-        handleScroll(direction);
-      }, 300));
-    });
-  </script> -->
-
   <script>
     document.addEventListener('DOMContentLoaded', () => {
       const logoAppear = document.querySelector('.logo-appear');
@@ -662,6 +378,8 @@
       const mobileWrap = document.querySelector('.mobile-wrap');
       const slider = document.querySelector('.owl-carousel'); // Add your slider selector here
       const footer = document.querySelector('footer'); // Footer element
+      const btnTranform = document.querySelector('.btn-trnas');
+      const btnMobile = document.querySelector('.btn-mobile');
 
       let scrollStep = 0;
       let isScrolling = false;
@@ -692,25 +410,50 @@
             topHeader.classList.add('show');
             leftRemote.classList.add('show');
             rightRemote.classList.add('show');
-            testimonial.classList.add('stm');
+            btnTranform.classList.add('btnup');
+            // testimonial.classList.add('stm');
             heroBuilding.classList.add('hrmov');
             heroTrees.classList.add('trmov');
+
             scrollStep++;
-          } else if (scrollStep === 3) {
+          }
+          // } else if (scrollStep === 3) {
+          //   topHeader.classList.add('show');
+          //   // rightUl.classList.add('show');
+          //   // rightHead.classList.add('show');
+          //   // mobileWrap.classList.add('show');
+          //   leftRemote.classList.add('off');
+          //   rightRemote.classList.add('off');
+          //   testimonial.classList.add('stm');
+          //   // hideElement(heroBuilding);
+          //   // hideElement(heroTrees);
+          //   // heroBuilding.classList.add('downb');
+
+          //   scrollStep++;
+          // }
+
+          else if (scrollStep === 3) {
             topHeader.classList.add('show');
             rightUl.classList.add('show');
             rightHead.classList.add('show');
             mobileWrap.classList.add('show');
+            btnMobile.classList.add('mobileup');
             leftRemote.classList.add('off');
             rightRemote.classList.add('off');
             testimonial.classList.add('off');
-            hideElement(heroBuilding);
-            hideElement(heroTrees);
+            // hideElement(heroBuilding);
+            // hideElement(heroTrees);
+            // heroBuilding.classList.add('downb');
+
             scrollStep++;
-          } else if (scrollStep === 4) {
+          }
+
+
+
+          else if (scrollStep === 4) {
             document.body.classList.add('zoomed');
             setTimeout(() => {
-              window.location.href = 'lounge.html';
+              window.location.href = 'scroll-bg.html';
             }, 1000);
             scrollStep++;
           }
@@ -795,28 +538,7 @@
     });
   </script>
 
-  <script>
-    function handleViewportChange() {
-      const viewportWidth = window.innerWidth;
 
-      // Check if viewport width is less than or equal to 767.98px
-      if (viewportWidth <= 767.98) {
-        // Redirect to another page if not already on that page
-        if (window.location.pathname !== 'mobile-home.html') {
-          window.location.href = 'mobile-home.html';
-        }
-      } else {
-        // Do nothing if it's 768px or more
-      }
-    }
-
-    // Initial check when the page loads
-    handleViewportChange();
-
-    // Add an event listener for viewport size changes
-    window.addEventListener('resize', handleViewportChange);
-
-  </script>
 
 </body>
 

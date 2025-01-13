@@ -46,9 +46,9 @@
   <div class="main-content">
 
     <div class="arrow-wrap">
-      <a href="#">
+      <!-- <a href="#">
         <img src="assets/images/icon/left-arrow.png" alt="icon" width="65" height="20">
-      </a>
+      </a> -->
     </div>
     <div class="title-badge">
 
@@ -282,11 +282,11 @@
       'wheel',
       throttle((event) => {
         if (event.deltaY > 0) {
-          // expandableFooter.classList.add('expanded');
-          changeBackground();
+          expandableFooter.classList.add('expanded');
+          // changeBackground();
         } else {
-          // expandableFooter.classList.remove('expanded');
-          previousBackground();
+          expandableFooter.classList.remove('expanded');
+          // previousBackground();
         }
       }, 600) // Adjust delay as needed
     );
@@ -372,6 +372,30 @@
         }
       });
     });
+
+  </script>
+
+
+  <script>
+    function handleViewportChange() {
+      const viewportWidth = window.innerWidth;
+
+      // Check if viewport width is less than or equal to 767.98px
+      if (viewportWidth <= 767.98) {
+        // Redirect to another page if not already on that page
+        if (window.location.pathname !== 'scroll-bg.html') {
+          window.location.href = 'scroll-bg.html';
+        }
+      } else {
+        // Do nothing if it's 768px or more
+      }
+    }
+
+    // Initial check when the page loads
+    handleViewportChange();
+
+    // Add an event listener for viewport size changes
+    window.addEventListener('resize', handleViewportChange);
 
   </script>
 </body>

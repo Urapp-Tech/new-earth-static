@@ -207,3 +207,15 @@ body.zoomed {
     transition: transform 0.5s ease;
     /* Smooth zoom transition */
 }
+
+.is-mobile {
+    display: none;
+}
+
+.hero-one .is-mobile {
+    display: none;
+}
+
+.is-mobile-home {
+    display: none;
+}
