@@ -115,7 +115,7 @@ body {
 
 header {
     width: 100%;
-    background: #fff;
+    background: #ffffff6b;
     padding: 34px 0;
 }
 
@@ -142,6 +142,11 @@ header .header-main .action-btn {
     justify-content: flex-end;
 }
 
+.is--bedroom header .header-main .action-btn {
+
+    opacity: 0;
+}
+
 header .header-main .action-btn a {
     display: block;
     max-width: 129px;
@@ -156,6 +161,11 @@ header .header-main .action-btn a {
     text-transform: capitalize;
     flex: 1;
     font-family: Futura Md BT;
+}
+
+.hero-one header .header-main .action-btn a {
+    background: #F47F4A;
+    border-radius: 2px;
 }
 
 /* testimonial wrap */

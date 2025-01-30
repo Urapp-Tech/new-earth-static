@@ -36,7 +36,7 @@
             </div>
             <div class="col-md-6">
               <div class="action-btn">
-                <a href="#">
+                <a href="">
                   Transform now
                 </a>
               </div>
@@ -249,7 +249,7 @@
 
           </div>
           <div class="col-12 btn-trnas">
-            <a href="" class="btn--act">
+            <a href="scroll-bg.html" class="btn--act">
               Transform
             </a>
 
@@ -328,10 +328,10 @@
         // stagePadding: 50,
         responsive: {
           0: {
-            items: 3 // 1 item for small screens
+            items: 1 // 1 item for small screens
           },
           767: {
-            items: 3, // 2 items for medium screens
+            items: 1, // 2 items for medium screens
             autoplay: true,
           },
           1000: {
@@ -380,7 +380,7 @@
       const footer = document.querySelector('footer'); // Footer element
       const btnTranform = document.querySelector('.btn-trnas');
       const btnMobile = document.querySelector('.btn-mobile');
-
+      // const testMobile =document.querySelector('.tes');
       let scrollStep = 0;
       let isScrolling = false;
 
@@ -417,22 +417,26 @@
 
             scrollStep++;
           }
-          // } else if (scrollStep === 3) {
-          //   topHeader.classList.add('show');
-          //   // rightUl.classList.add('show');
-          //   // rightHead.classList.add('show');
-          //   // mobileWrap.classList.add('show');
-          //   leftRemote.classList.add('off');
-          //   rightRemote.classList.add('off');
-          //   testimonial.classList.add('stm');
-          //   // hideElement(heroBuilding);
-          //   // hideElement(heroTrees);
-          //   // heroBuilding.classList.add('downb');
-
-          //   scrollStep++;
-          // }
-
           else if (scrollStep === 3) {
+            testimonial.classList.add('verty');
+            topHeader.classList.add('show');
+            // rightUl.classList.add('show');
+            // rightHead.classList.add('show');
+            // mobileWrap.classList.add('show');
+            // btnMobile.classList.add('mobileup');
+            leftRemote.classList.add('off');
+            rightRemote.classList.add('off');
+            // testimonial.classList.add('off');
+            // hideElement(heroBuilding);
+            // hideElement(heroTrees);
+            // heroBuilding.classList.add('downb');
+
+            scrollStep++;
+          }
+
+
+          else if (scrollStep === 4) {
+            testimonial.classList.remove('verty');
             topHeader.classList.add('show');
             rightUl.classList.add('show');
             rightHead.classList.add('show');
@@ -440,7 +444,7 @@
             btnMobile.classList.add('mobileup');
             leftRemote.classList.add('off');
             rightRemote.classList.add('off');
-            testimonial.classList.add('off');
+
             // hideElement(heroBuilding);
             // hideElement(heroTrees);
             // heroBuilding.classList.add('downb');
@@ -450,7 +454,7 @@
 
 
 
-          else if (scrollStep === 4) {
+          else if (scrollStep === 5) {
             document.body.classList.add('zoomed');
             setTimeout(() => {
               window.location.href = 'scroll-bg.html';
@@ -458,17 +462,30 @@
             scrollStep++;
           }
         } else if (direction === 'up') {
-          if (scrollStep === 4) {
+          if (scrollStep === 5) {
             document.body.classList.remove('zoomed');
+            btnMobile.classList.remove('mobileup');
+            rightUl.classList.remove('show');
+            rightHead.classList.remove('show');
+            // testimonial.classList.remove('verty');
+            testimonial.classList.add('verty');
+            scrollStep--;
+          }
+          else if (scrollStep === 4) {
+            testimonial.classList.remove('verty');
             scrollStep--;
           } else if (scrollStep === 3) {
             topHeader.classList.remove('show');
-            rightUl.classList.remove('show');
-            rightHead.classList.remove('show');
+            // rightUl.classList.remove('show');
+            // rightHead.classList.remove('show');
+
             mobileWrap.classList.remove('show');
+
             leftRemote.classList.remove('off');
             rightRemote.classList.remove('off');
-            testimonial.classList.remove('off');
+
+            btnTranform.classList.remove('btnup');
+            // btnMobile.classList.remove('mobileup');
             showElement(heroBuilding);
             showElement(heroTrees);
             scrollStep--;
@@ -477,9 +494,10 @@
             hideElement(heroBuilding);
             logoAppear.classList.remove('off');
             topHeader.classList.remove('show');
+
             leftRemote.classList.remove('show');
             rightRemote.classList.remove('show');
-            testimonial.classList.remove('stm');
+
             heroBuilding.classList.remove('hrmov');
             heroTrees.classList.remove('trmov');
             showElement(mainTitle);

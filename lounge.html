@@ -26,7 +26,7 @@
         </div>
         <div class="col-md-6">
           <div class="action-btn">
-            <a href="#" class="desktop-menu">
+            <a href="lounge.html" class="desktop-menu">
 
               Transform now
 
@@ -355,7 +355,7 @@
       }, 1000); // Match this delay to the CSS transition duration
     });
   </script> -->
-  <script>
+  <!-- <script>
     document.querySelectorAll('[id^="zoomButton"]').forEach(button => {
       button.addEventListener('click', function (event) {
         event.preventDefault();
@@ -368,13 +368,43 @@
 
           setTimeout(() => {
             window.location.href = this.getAttribute('href');
-          }, 1000); // Match this delay to the CSS transition duration
+          }, 1500); // Match this delay to the CSS transition duration
         }
       });
     });
 
-  </script>
+  </script> -->
+  <script>
+    document.querySelectorAll('[id^="zoomButton"]').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
 
+        const effectId = this.getAttribute('data-effect');
+        const zoomEffect = document.getElementById(effectId);
+
+        if (zoomEffect) {
+          zoomEffect.classList.add('active');
+
+          setTimeout(() => {
+            localStorage.setItem('pageLoadEffect', 'true'); // Save state for next page
+            window.location.href = this.getAttribute('href');
+          }, 1500); // Match this delay to the CSS transition duration
+        }
+      });
+    });
+
+    // Smooth entry transition on page load
+    document.addEventListener("DOMContentLoaded", function () {
+      const pageWrapper = document.getElementsByClassName('is--bed');
+
+      if (localStorage.getItem('pageLoadEffect')) {
+        pageWrapper.classList.add('page-loaded'); // Add class for transition
+        localStorage.removeItem('pageLoadEffect'); // Remove flag after animation
+      } else {
+        pageWrapper.style.opacity = 1; // Show instantly if no transition is needed
+      }
+    });
+  </script>
 
   <script>
     function handleViewportChange() {

@@ -19,6 +19,26 @@
     border-radius: 3px;
 }
 
+
+
+
+.hor-tabs::-webkit-scrollbar {
+    width: 6px;
+}
+
+/* Track */
+.hor-tabs::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #49494A;
+    border-radius: 3px;
+    background-color: #49494A;
+}
+
+/* Handle */
+.hor-tabs::-webkit-scrollbar-thumb {
+    background: #F47F4A;
+    border-radius: 3px;
+}
+
 .about-banner {
     min-height: 770px;
     display: flex;
@@ -88,7 +108,7 @@ section.research-banner {
 section.research-banner .research-content {
     max-width: 1352px;
     margin: auto;
-    background: #fff;
+    background: #EFFBFF;
     padding: 64px 40px;
     display: flex;
     justify-content: space-between;
@@ -126,7 +146,7 @@ section.research-banner .research-content p {
 .our-values-banner .our-values {
     padding: 5% 4%;
     border-radius: 20px;
-    background: #fff;
+    background: #EFFBFF;
 }
 
 .our-values-banner .our-values h2 {
@@ -187,7 +207,7 @@ section.research-banner .research-content p {
 .mission-banner.solution .problem-wrapper li p {
     color: #1e1e1e;
     font-size: 30px;
-    line-height: 30px;
+    line-height: 36px;
     font-weight: 700;
     text-align: left;
 }

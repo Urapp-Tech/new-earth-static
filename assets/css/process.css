@@ -35,7 +35,7 @@
 }
 
 .process .inside-process .inside-wrapper h2 {
-    max-width: 209px;
+    max-width: 259px;
     font-size: 32px;
     font-weight: 800;
     line-height: 40px;
@@ -122,15 +122,22 @@ h3.title {}
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 19px;
+    padding: 20px;
     background: #f1f1f1;
     border-radius: 20px;
     margin: 60px 0;
 }
 
+.process.p-two .inside-tabs .nav-tabs .nav-link.active {
+    background: #F47F4A;
+    color: #fff;
+}
+
 .process.p-two .inside-tabs .tab-content .survey-wrapper .survey-media {
     max-width: 608px;
-    height: 608px;
+    /* height: 608px; */
+    background: #fb9d73;
+    border-radius: 20px;
 }
 
 .process.p-two .inside-tabs .tab-content .survey-wrapper .survey-media img {
@@ -138,6 +145,7 @@ h3.title {}
     width: 100%;
     height: 100%;
     object-fit: contain;
+    border-radius: 20px;
 }
 
 .process.p-two .inside-tabs .tab-content .survey-wrapper .survey-content {
@@ -201,4 +209,16 @@ h3.title {}
 .process.p-two .inside-tabs .nav-tabs .nav-link .active {
     background: #F47F4A;
     color: #fff;
+}
+
+.is--about header {
+    display: none;
+}
+
+@media screen and (min-width: 768px) {
+    .is--about header {
+        display: block;
+        top: 0;
+    }
+
 }
