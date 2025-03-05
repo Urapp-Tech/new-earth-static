@@ -393,17 +393,17 @@
       });
     });
 
-    // Smooth entry transition on page load
-    document.addEventListener("DOMContentLoaded", function () {
-      const pageWrapper = document.getElementsByClassName('is--bed');
+    // // Smooth entry transition on page load
+    // document.addEventListener("DOMContentLoaded", function () {
+    //   const pageWrapper = document.getElementsByClassName('is--bedroom');
 
-      if (localStorage.getItem('pageLoadEffect')) {
-        pageWrapper.classList.add('page-loaded'); // Add class for transition
-        localStorage.removeItem('pageLoadEffect'); // Remove flag after animation
-      } else {
-        pageWrapper.style.opacity = 1; // Show instantly if no transition is needed
-      }
-    });
+    //   if (localStorage.getItem('pageLoadEffect')) {
+    //     pageWrapper.classList.add('page-loaded'); // Add class for transition
+    //     localStorage.removeItem('pageLoadEffect'); // Remove flag after animation
+    //   } else {
+    //     pageWrapper.style.opacity = 1; // Show instantly if no transition is needed
+    //   }
+    // });
   </script>
 
   <script>
