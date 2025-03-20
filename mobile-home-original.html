@@ -14,96 +14,7 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
-  <style>
-    .modal {
-      display: none;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      background: white;
-      padding: 0px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-      z-index: 1000;
-      overflow: hidden;
-    }
 
-    .modal-content {
-      text-align: center;
-    }
-
-    .modal .is--about.career.process.p-two.mols .about-banner {
-      background: url('./assets/images/career-banner.png');
-      min-height: unset;
-      height: 100vh;
-      background-repeat: no-repeat;
-      background-size: cover;
-      position: relative;
-      z-index: 111;
-      background-position: center;
-    }
-
-    .modal .is--about.career.process.p-two.mols .about-banner::after {
-      content: '';
-      width: 100%;
-      height: 100%;
-      position: absolute;
-      background: #050000;
-      opacity: 0.2;
-      z-index: -1;
-    }
-
-
-
-
-    .modal .is--about.career.process.p-two.mols h1 {
-      color: #fff;
-      font-size: 100px;
-      line-height: 120px;
-
-    }
-
-    .modal .is--about.career.process.p-two.mols a,
-    .abt-page a {
-      text-decoration: none;
-      color: #fff;
-      background: #000;
-      padding: 15px 30px;
-      display: block;
-      max-width: 200px;
-      margin: 30px auto;
-      border-radius: 4px;
-    }
-
-    @media screen and (max-width: 767.98px) {
-      .is-mobile-home .modal .is--about.career.process.p-two.mols h1 {
-        color: #fff;
-        font-size: 55px;
-        line-height: 120px;
-      }
-
-      .is-mobile-home .modal .is--about.career.process.p-two.mols a,
-      .abt-page a {
-        text-decoration: none;
-        color: #fff;
-        background: #000;
-        padding: 10px 25px;
-        display: block;
-        max-width: 160px;
-        margin: 30px auto;
-        border-radius: 4px;
-        font-size: 14px;
-      }
-
-      .is-mobile-home .btnup.off {
-        opacity: 0 !important;
-      }
-
-      .is--about.abt-page .about-banner {
-        height: 100vh;
-      }
-    }
-  </style>
 </head>
 
 <body class="is-mobile-home">
@@ -380,80 +291,7 @@
       </div>
     </div>
 
-    <!-- modal -->
-    <div id="modal1" class="modal">
-      <div class="modal-content">
-        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-        <!-- <button id="closeModal"></button> -->
 
-        <div class="is--about career process p-two mols">
-          <!-- <header>
-        <div class="container">
-          <div class="row header-main">
-            <div class="col-md-6">
-              <a href="home.html">
-                <div class="logo-wrap">
-                  <img src="assets/images/logo.png" alt="logo" width="467" height="92" class="desktop-logo">
-                  <img src="assets/images/icon/m-logo.png" width="39" height="24" alt="logo" class="mobile-logo">
-                </div>
-              </a>
-
-            </div>
-            <div class="col-md-6">
-              <div class="action-btn">
-                <a href="lounge.html" class="desktop-menu d-none">
-
-                  Transform now
-
-
-                </a>
-                <img src="assets/images/icon/menu.png" alt="icon" width="36" height="36" class="menu-mobile">
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </header>
-      <div class="is-mobile">
-        <div class="mobile-header">
-          <a href="mobile-home.html" class="logo-main-mobile">
-            <img src="assets/images/icon/m-logo.png" alt="icon">
-          </a>
-          <a href="#" class="ham-menu">
-            <img src="assets/images/icon/menu.png" alt="menu">
-          </a>
-        </div>
-      </div> -->
-          <section class="about-banner">
-            <div class="about-content">
-              <h1>
-                Our Process
-              </h1>
-              <a href="process-two.html">
-                Learn more
-              </a>
-            </div>
-          </section>
-
-        </div>
-      </div>
-    </div>
-    <div id="modal2" class="modal">
-      <div class="modal-content">
-        <div class="is--about abt-page">
-          <section class="about-banner">
-            <div class="about-content">
-              <h1>
-                Building Dreams, One Space at a Time
-              </h1>
-              <a href="about-us.html">
-                Learn more
-              </a>
-            </div>
-          </section>
-        </div>
-      </div>
-    </div>
 
 
   </section>
@@ -527,10 +365,6 @@
 
   <script>
     document.addEventListener('DOMContentLoaded', () => {
-      // Modals
-      const modals = document.querySelectorAll('.modal');
-      const closeButtons = document.querySelectorAll('.closeModal');
-
       const logoAppear = document.querySelector('.logo-appear');
       const mainTitle = document.querySelector('.main-title');
       const heroTrees = document.querySelector('.hero-trees');
@@ -549,25 +383,6 @@
       // const testMobile =document.querySelector('.tes');
       let scrollStep = 0;
       let isScrolling = false;
-
-      // Show a specific modal by index
-      const showModal = (index) => {
-        hideModals(); // Ensure previous modals are hidden
-        if (modals[index]) {
-          modals[index].style.display = 'block';
-        }
-      };
-
-      // Hide all modals
-      const hideModals = () => {
-        modals.forEach(modal => modal.style.display = 'none');
-      };
-
-      // Close modals when clicking the close button
-      closeButtons.forEach(button => {
-        button.addEventListener('click', hideModals);
-      });
-
 
       const showElement = (element) => element.classList.add('visible');
       const hideElement = (element) => element.classList.remove('visible');
@@ -596,46 +411,43 @@
             leftRemote.classList.add('show');
             rightRemote.classList.add('show');
             btnTranform.classList.add('btnup');
+            // testimonial.classList.add('stm');
             heroBuilding.classList.add('hrmov');
             heroTrees.classList.add('trmov');
 
             scrollStep++;
           }
           else if (scrollStep === 3) {
+            testimonial.classList.add('verty');
+            topHeader.classList.add('show');
+            // rightUl.classList.add('show');
+            // rightHead.classList.add('show');
+            // mobileWrap.classList.add('show');
+            // btnMobile.classList.add('mobileup');
             leftRemote.classList.add('off');
             rightRemote.classList.add('off');
-            topHeader.classList.add('show');
-            btnTranform.classList.add('off');
-            showModal(0); // Open first modal
+            // testimonial.classList.add('off');
+            // hideElement(heroBuilding);
+            // hideElement(heroTrees);
+            // heroBuilding.classList.add('downb');
+
             scrollStep++;
           }
+
+
           else if (scrollStep === 4) {
-            hideModals();
-            showModal(1); // Open second modal
-            btnTranform.classList.add('off');
-            scrollStep++;
-          }
-          // else if (scrollStep === 3) {
-          //   testimonial.classList.add('verty');
-          //   topHeader.classList.add('show');
-          //   leftRemote.classList.add('off');
-          //   rightRemote.classList.add('off');
-          //   scrollStep++;
-          // }
-
-
-          else if (scrollStep === 5) {
-            hideModals();
             testimonial.classList.remove('verty');
             topHeader.classList.add('show');
             rightUl.classList.add('show');
             rightHead.classList.add('show');
             mobileWrap.classList.add('show');
-            btnTranform.classList.remove('off');
             btnMobile.classList.add('mobileup');
             leftRemote.classList.add('off');
             rightRemote.classList.add('off');
 
+            // hideElement(heroBuilding);
+            // hideElement(heroTrees);
+            // heroBuilding.classList.add('downb');
 
             scrollStep++;
           }
@@ -650,36 +462,28 @@
             scrollStep++;
           }
         } else if (direction === 'up') {
-          if (scrollStep === 6) {
+          if (scrollStep === 5) {
             document.body.classList.remove('zoomed');
             btnMobile.classList.remove('mobileup');
             rightUl.classList.remove('show');
             rightHead.classList.remove('show');
-
-            // testimonial.classList.add('verty');
-            scrollStep--;
-          }
-          else if (scrollStep === 5) {
             // testimonial.classList.remove('verty');
-            btnTranform.classList.add('off');
-            hideModals();
-            showModal(1); // Go back to second modal
+            testimonial.classList.add('verty');
             scrollStep--;
           }
-
           else if (scrollStep === 4) {
-            // testimonial.classList.remove('verty');
-            btnTranform.classList.add('off');
-            hideModals();
-            showModal(0); // Go back to first modal
+            testimonial.classList.remove('verty');
             scrollStep--;
-          }
-          else if (scrollStep === 3) {
-            hideModals();
+          } else if (scrollStep === 3) {
             topHeader.classList.remove('show');
+            // rightUl.classList.remove('show');
+            // rightHead.classList.remove('show');
+
             mobileWrap.classList.remove('show');
+
             leftRemote.classList.remove('off');
             rightRemote.classList.remove('off');
+
             btnTranform.classList.remove('btnup');
             // btnMobile.classList.remove('mobileup');
             showElement(heroBuilding);

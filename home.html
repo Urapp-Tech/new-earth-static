@@ -14,7 +14,67 @@
   <link rel="stylesheet"
     href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
+  <style>
+    .modal {
+      display: none;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: white;
+      padding: 0px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      z-index: 1000;
+      overflow: hidden;
+    }
 
+    .modal-content {
+      text-align: center;
+    }
+
+    .modal .is--about.career.process.p-two.mols .about-banner {
+      background: url('./assets/images/career-banner.png');
+      min-height: unset;
+      height: 100vh;
+      background-repeat: no-repeat;
+      background-size: cover;
+      position: relative;
+      z-index: 111;
+      background-position: center;
+    }
+
+    .modal .is--about.career.process.p-two.mols .about-banner::after {
+      content: '';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: #050000;
+      opacity: 0.2;
+      z-index: -1;
+    }
+
+
+
+
+    .modal .is--about.career.process.p-two.mols h1 {
+      color: #fff;
+      font-size: 100px;
+      line-height: 120px;
+
+    }
+
+    .modal .is--about.career.process.p-two.mols a,
+    .abt-page a {
+      text-decoration: none;
+      color: #fff;
+      background: #000;
+      padding: 15px 30px;
+      display: block;
+      max-width: 200px;
+      margin: 30px auto;
+      border-radius: 4px;
+    }
+  </style>
 </head>
 
 <body>
@@ -312,6 +372,87 @@
     <!-- section about start -->
 
     <!-- section about end -->
+    <!-- modal -->
+    <div id="modal1" class="modal">
+      <div class="modal-content">
+        <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+        <!-- <button id="closeModal"></button> -->
+
+        <div class="is--about career process p-two mols">
+          <!-- <header>
+            <div class="container">
+              <div class="row header-main">
+                <div class="col-md-6">
+                  <a href="home.html">
+                    <div class="logo-wrap">
+                      <img src="assets/images/logo.png" alt="logo" width="467" height="92" class="desktop-logo">
+                      <img src="assets/images/icon/m-logo.png" width="39" height="24" alt="logo" class="mobile-logo">
+                    </div>
+                  </a>
+
+                </div>
+                <div class="col-md-6">
+                  <div class="action-btn">
+                    <a href="lounge.html" class="desktop-menu d-none">
+
+                      Transform now
+
+
+                    </a>
+                    <img src="assets/images/icon/menu.png" alt="icon" width="36" height="36" class="menu-mobile">
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </header>
+          <div class="is-mobile">
+            <div class="mobile-header">
+              <a href="mobile-home.html" class="logo-main-mobile">
+                <img src="assets/images/icon/m-logo.png" alt="icon">
+              </a>
+              <a href="#" class="ham-menu">
+                <img src="assets/images/icon/menu.png" alt="menu">
+              </a>
+            </div>
+          </div> -->
+          <section class="about-banner">
+            <div class="about-content">
+              <h1>
+                Our Process
+              </h1>
+              <a href="process-two.html">
+                Learn more
+              </a>
+            </div>
+          </section>
+
+        </div>
+      </div>
+    </div>
+    <div id="modal2" class="modal">
+      <div class="modal-content">
+        <div class="is--about abt-page">
+          <section class="about-banner">
+            <div class="about-content">
+              <h1>
+                Building Dreams, One Space at a Time
+              </h1>
+              <a href="about-us.html">
+                Learn more
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div id="modal3" class="modal">
+      <div class="modal-content">
+        <p>Modal 3: Another modal for scrolling.</p>
+        <button class="closeModal">Close</button>
+      </div>
+    </div> -->
   </section>
 
 
@@ -379,9 +520,11 @@
 
 
 
-  <script>
+  <!-- <script>
     document.addEventListener('DOMContentLoaded', () => {
-
+      // modal
+      const modals = document.querySelectorAll('.modal');
+      const closeButtons = document.querySelectorAll('.closeModal');
 
       const logoAppear = document.querySelector('.logo-appear');
       const mainTitle = document.querySelector('.main-title');
@@ -390,11 +533,28 @@
 
 
 
-      logoAppear.classList.add('visible');
-      logoAppear.classList.add('show');
-      mainTitle.classList.add('visible');
-      heroTrees.classList.add('visible');
-      heroBuilding.classList.add('visible');
+      // logoAppear.classList.add('visible');
+      // logoAppear.classList.add('show');
+      // mainTitle.classList.add('visible');
+      // heroTrees.classList.add('visible');
+      // heroBuilding.classList.add('visible');
+      // setTimeout(() => {
+      //   logoAppear.classList.add('visible');
+      // }, 2000);
+
+      // setTimeout(() => {
+      //   logoAppear.classList.add('show');
+      // }, 2000);
+
+      // setTimeout(() => {
+      //   mainTitle.classList.add('visible');
+      // }, 4000);
+
+      // setTimeout(() => {
+      //   heroTrees.classList.add('visible');
+      //   heroBuilding.classList.add('visible');
+      // }, 5000);
+
 
       const testimonial = document.querySelector('.testimonial-wrap');
       const leftRemote = document.querySelector('.remodel-left');
@@ -406,12 +566,34 @@
       const slider = document.querySelector('.owl-carousel'); // Add your slider selector here
       const footer = document.querySelector('footer'); // Footer element
 
+
       let scrollStep = 0;
       let isScrolling = false;
 
+      // for modal
+      // const showModal = () => modal.style.display = 'block';
+      // const hideModal = () => modal.style.display = 'none';
+      const showModal = (index) => {
+        if (modals[index]) {
+          modals[index].style.display = 'block';
+        }
+      };
+
+      // Function to hide all modals
+      const hideModals = () => {
+        modals.forEach(modal => modal.style.display = 'none');
+      };
+
+      // Close modal when clicking the close button
+      closeButtons.forEach(button => {
+        button.addEventListener('click', hideModals);
+      });
+      // closeModal.addEventListener('click', hideModal);
+      // end modal
+
       const showElement = (element) => element.classList.add('visible');
       const hideElement = (element) => element.classList.remove('visible');
-
+      // closeModal.addEventListener('click', hideModal);
       const handleScroll = (direction) => {
         if (isScrolling) return;
         isScrolling = true;
@@ -441,6 +623,11 @@
             heroTrees.classList.add('trmov');
             scrollStep++;
           } else if (scrollStep === 1) {
+            showModal();
+
+            scrollStep++;
+          } else if (scrollStep === 2) {
+            hideModal();
             topHeader.classList.add('show');
             rightUl.classList.add('show');
             rightHead.classList.add('show');
@@ -451,7 +638,8 @@
             hideElement(heroBuilding);
             hideElement(heroTrees);
             scrollStep++;
-          } else if (scrollStep === 2) {
+          }
+          else if (scrollStep === 3) {
             document.body.classList.add('zoomed');
             setTimeout(() => {
               window.location.href = 'lounge.html';
@@ -463,6 +651,7 @@
             document.body.classList.remove('zoomed');
             scrollStep--;
           } else if (scrollStep === 2) {
+            hideModal();
             topHeader.classList.remove('show');
             rightUl.classList.remove('show');
             rightHead.classList.remove('show');
@@ -474,17 +663,24 @@
             showElement(heroTrees);
             scrollStep--;
           } else if (scrollStep === 1) {
-            hideElement(heroTrees);
-            hideElement(heroBuilding);
-            logoAppear.classList.remove('off');
-            topHeader.classList.remove('show');
-            leftRemote.classList.remove('show');
-            rightRemote.classList.remove('show');
-            testimonial.classList.remove('stm');
-            heroBuilding.classList.remove('hrmov');
-            heroTrees.classList.remove('trmov');
-            showElement(mainTitle);
-            scrollStep--;
+            // hideElement(heroTrees);
+            // hideElement(heroBuilding);
+            // logoAppear.classList.remove('off');
+            // topHeader.classList.remove('show');
+            // leftRemote.classList.remove('show');
+            // rightRemote.classList.remove('show');
+            // testimonial.classList.remove('stm');
+            // heroBuilding.classList.remove('hrmov');
+            // heroTrees.classList.remove('trmov');
+            // showElement(mainTitle);
+            // scrollStep--;
+
+            // logoAppear.classList.add('visible');
+            // logoAppear.classList.add('show');
+            // mainTitle.classList.add('visible');
+            // heroTrees.classList.add('visible');
+            // heroBuilding.classList.add('visible');
+            // scrollStep--;
           }
           // } else if (scrollStep === 1) {
           //   logoAppear.classList.remove('show');
@@ -540,7 +736,203 @@
         footer.classList.add('show');
       }
     });
+  </script> -->
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      // Modals
+      const modals = document.querySelectorAll('.modal');
+      const closeButtons = document.querySelectorAll('.closeModal');
+
+      // Elements for animations
+      const logoAppear = document.querySelector('.logo-appear');
+      const mainTitle = document.querySelector('.main-title');
+      const heroTrees = document.querySelector('.hero-trees');
+      const heroBuilding = document.querySelector('.hero-building');
+
+      const testimonial = document.querySelector('.testimonial-wrap');
+      const leftRemote = document.querySelector('.remodel-left');
+      const rightRemote = document.querySelector('.remodel-right');
+      const topHeader = document.querySelector('header');
+      const rightUl = document.querySelector('.right-ul');
+      const rightHead = document.querySelector('.right-heading');
+      const mobileWrap = document.querySelector('.mobile-wrap');
+      const slider = document.querySelector('.owl-carousel'); // Slider element
+      const footer = document.querySelector('footer'); // Footer element
+
+      let scrollStep = 0;
+      let isScrolling = false;
+
+      // Adding delays between element visibility
+      setTimeout(() => logoAppear.classList.add('visible'), 2000);
+      setTimeout(() => logoAppear.classList.add('show'), 2000);
+      setTimeout(() => mainTitle.classList.add('visible'), 2000);
+      setTimeout(() => {
+        heroTrees.classList.add('visible');
+        heroBuilding.classList.add('visible');
+      }, 3000);
+
+      // Show a specific modal by index
+      const showModal = (index) => {
+        hideModals(); // Ensure previous modals are hidden
+        if (modals[index]) {
+          modals[index].style.display = 'block';
+        }
+      };
+
+      // Hide all modals
+      const hideModals = () => {
+        modals.forEach(modal => modal.style.display = 'none');
+      };
+
+      // Close modals when clicking the close button
+      closeButtons.forEach(button => {
+        button.addEventListener('click', hideModals);
+      });
+
+      const showElement = (element) => element?.classList.add('visible');
+      const hideElement = (element) => element?.classList.remove('visible');
+
+      const handleScroll = (direction) => {
+        if (isScrolling) return;
+        isScrolling = true;
+
+        setTimeout(() => {
+          isScrolling = false;
+        }, 1000);
+
+        if (direction === 'down') {
+          if (scrollStep === 0) {
+
+            hideElement(mainTitle);
+            logoAppear.classList.add('off');
+            topHeader.classList.add('show');
+            leftRemote.classList.add('show');
+            rightRemote.classList.add('show');
+            testimonial.classList.add('stm');
+            heroBuilding.classList.add('hrmov');
+            heroTrees.classList.add('trmov');
+            scrollStep++;
+          } else if (scrollStep === 1) {
+            showModal(0); // Open first modal
+            scrollStep++;
+          } else if (scrollStep === 2) {
+            hideModals();
+            showModal(1); // Open second modal
+            scrollStep++;
+          }
+          // } else if (scrollStep === 3) {
+          //   hideModals();
+          //   showModal(2); // Open third modal
+          //   scrollStep++;
+          //} 
+          else if (scrollStep === 3) {
+            hideModals();
+            topHeader.classList.add('show');
+            rightUl.classList.add('show');
+            rightHead.classList.add('show');
+            mobileWrap.classList.add('show');
+            leftRemote.classList.add('off');
+            rightRemote.classList.add('off');
+            testimonial.classList.add('off');
+            hideElement(heroBuilding);
+            hideElement(heroTrees);
+            scrollStep++;
+          } else if (scrollStep === 4) {
+            document.body.classList.add('zoomed');
+            setTimeout(() => {
+              window.location.href = 'lounge.html';
+            }, 1000);
+            scrollStep++;
+          }
+        } else if (direction === 'up') {
+          if (scrollStep === 5) {
+            document.body.classList.remove('zoomed');
+            scrollStep--;
+          } else if (scrollStep === 4) {
+            hideModals();
+            showModal(1); // Go back to second modal
+
+            scrollStep--;
+          } else if (scrollStep === 3) {
+            hideModals();
+            showModal(0); // Go back to first modal
+            scrollStep--;
+          } else if (scrollStep === 2) {
+
+            topHeader.classList.remove('show');
+            rightUl.classList.remove('show');
+            rightHead.classList.remove('show');
+            mobileWrap.classList.remove('show');
+            leftRemote.classList.remove('off');
+            rightRemote.classList.remove('off');
+            testimonial.classList.remove('off');
+            showElement(heroBuilding);
+            showElement(heroTrees);
+            scrollStep--;
+          } else if (scrollStep === 1) {
+            hideModals();
+            showElement(mainTitle);
+            logoAppear.classList.remove('off');
+            topHeader.classList.remove('show');
+            leftRemote.classList.remove('show');
+            rightRemote.classList.remove('show');
+            testimonial.classList.remove('stm');
+            heroBuilding.classList.remove('hrmov');
+            heroTrees.classList.remove('trmov');
+            scrollStep--;
+          }
+        }
+
+        // Footer visibility on mobile/tablet
+        if (scrollStep === 5 && window.innerWidth <= 768) {
+          footer.classList.add('show');
+        }
+      };
+
+      const throttle = (func, limit) => {
+        let inThrottle;
+        return function () {
+          const args = arguments;
+          const context = this;
+          if (!inThrottle) {
+            func.apply(context, args);
+            inThrottle = true;
+            setTimeout(() => (inThrottle = false), limit);
+          }
+        };
+      };
+
+      const onWheel = throttle((event) => {
+        if (slider.contains(event.target)) return; // Skip scroll handling if inside slider
+        const direction = event.deltaY > 0 ? 'down' : 'up';
+        handleScroll(direction);
+      }, 300);
+
+      window.addEventListener('wheel', onWheel);
+
+      let touchStartY = 0;
+
+      window.addEventListener('touchstart', (event) => {
+        touchStartY = event.touches[0].clientY;
+      });
+
+      window.addEventListener('touchmove', throttle((event) => {
+        if (slider.contains(event.target)) return; // Skip touch handling if inside slider
+        const touchEndY = event.touches[0].clientY;
+        const direction = touchStartY - touchEndY > 0 ? 'down' : 'up';
+        handleScroll(direction);
+      }, 300));
+
+      // Ensure footer visibility on page load for mobile/tablet
+      if (window.innerWidth <= 768) {
+        footer.classList.add('show');
+      }
+    });
+
   </script>
+
+
+
 
   <script>
     function handleViewportChange() {
