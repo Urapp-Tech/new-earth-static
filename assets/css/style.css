@@ -1,0 +1,221 @@
+@import url('fonts.css');
+@import url('logo.css');
+@import url('hero.css');
+@import url('about.css');
+@import url('career.css');
+@import url('process.css');
+@import url('scrollbg.css');
+@import url('lounge.css');
+@import url('responsive.css');
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    font-family: Arial, sans-serif;
+    height: 100vh;
+}
+
+* {
+    font-family: 'Trap';
+}
+
+.container {
+    max-width: 1320px;
+    padding: 0 20px;
+}
+
+.logo-appear {
+    max-width: 300px;
+    height: 45px;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 0;
+    right: 0;
+    /* top: 200px; */
+    transform: translateY(700%) scale(1);
+    z-index: 111;
+
+    transition: transform 0.5s ease, top 0.5s ease;
+
+    /* Smooth animation */
+}
+
+
+.logo-appear.show {
+    top: 20px;
+    transform: translateY(0);
+    /* Final top position */
+    transform: scale(0.8);
+    /* Shrink the logo */
+    opacity: 1;
+}
+
+.logo-appear img {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.logo-appear.off {
+    top: -200px;
+}
+
+.hero-building.hrmov {
+    /* transform: translate(216px, 82px); */
+    transform: translate(124px, 8px);
+    transition: transform 1s ease-in-out;
+}
+
+.hero-trees.trmov {
+    transform: translate(200px, 60px);
+    transition: transform 1s ease-in-out;
+}
+
+.testimonial-wrap {
+
+    position: absolute;
+    bottom: -223px;
+    z-index: 111;
+    transition: bottom 0.5s ease-in-out;
+}
+
+.stm {
+    /* bottom: 200px; */
+    /* bottom: 188px; */
+    bottom: 22%;
+}
+
+.remodel-left {
+    position: absolute;
+    /* top: 90px; */
+    top: 150px;
+    left: -580px;
+    z-index: 111;
+    transition: left 0.5s ease-in-out;
+}
+
+.remodel-left.show {
+    /* left: 80px; */
+    left: 246px;
+}
+
+.remodel-right {
+    position: absolute;
+    /* top: 100px; */
+    top: 150px;
+    right: -990px;
+    z-index: 111;
+    transition: right 0.5s ease-in-out;
+}
+
+.remodel-right.show {
+    right: -200px;
+}
+
+header {
+    position: absolute;
+    top: -100px;
+    left: 0;
+    right: 0;
+    z-index: 111;
+    transition: top 0.5s ease-in-out;
+    padding: 18px 0;
+}
+
+header.show {
+    top: 0;
+}
+
+.right-ul {
+    /* right: -900px; */
+    position: absolute;
+    top: 450px;
+    right: -900px;
+    z-index: 111;
+    transition: right 0.5s ease-in-out;
+}
+
+.right-ul.show {
+    /* right: 200px; */
+    right: 300px;
+}
+
+.right-heading {
+    position: absolute;
+    top: 150px;
+    right: 200px;
+    z-index: 111;
+    transition: opacity 0.9s ease-in-out;
+    opacity: 0;
+}
+
+.right-heading.show {
+    opacity: 1;
+}
+
+.mobile-wrap {
+    position: absolute;
+    bottom: -555px;
+    left: 300px;
+    left: 240px;
+    z-index: 111;
+    transition: bottom 1s ease-in-out;
+    /* top: auto; */
+}
+
+.mobile-wrap.show {
+    height: 100vh;
+    /* bottom: 160px; */
+    bottom: 12%;
+    max-width: 34vw;
+}
+
+.logo-appear.come {
+    opacity: 1;
+}
+
+/* those who wants to hide */
+.remodel-left.off {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.remodel-right.off {
+    opacity: 0;
+    transition: opacity 0.5s ease-out;
+}
+
+.testimonial-wrap.off {
+
+
+    bottom: -223px;
+    transition: bottom 0.5s ease-out;
+}
+
+.logo-appear.gone {
+    opacity: 0;
+}
+
+body.zoomed {
+    transform: scale(1.2);
+    /* Scale effect */
+    transition: transform 0.5s ease;
+    /* Smooth zoom transition */
+}
+
+.is-mobile {
+    display: none;
+}
+
+.hero-one .is-mobile {
+    display: none;
+}
+
+.is-mobile-home {
+    display: none;
+}

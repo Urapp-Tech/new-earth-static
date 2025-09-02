@@ -1,0 +1,302 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* Hide scrollbar */
+    height: 100vh;
+    position: relative;
+}
+
+.header,
+.footer {
+    position: sticky;
+    z-index: 111;
+    text-align: center;
+    background: #333;
+    color: white;
+    padding: 10px;
+}
+
+.header {
+    top: 0;
+}
+
+.footer {
+    bottom: 0;
+}
+
+.main-content {
+    position: relative;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+.background.active {
+    opacity: 1;
+}
+
+.next-btn {
+    position: absolute;
+    bottom: 60px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.is--bedroom header {
+    background: #ffffff6b;
+    padding: 22px 0;
+    position: absolute;
+    top: 0;
+    bottom: auto;
+    left: 0;
+    right: 0;
+    z-index: 111;
+}
+
+/* .is--bedroom header {
+
+    background: #000;
+    padding: 22px 0;
+} */
+
+.is--bedroom header a {
+    background: #1e1e1e;
+}
+
+
+.is--bedroom .footer {
+    min-height: 300px;
+    /* background-image: url('../images/bed/blur-bg1.png');
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat; */
+    background-color: #333333b5;
+    padding: 4% 0 0;
+    backdrop-filter: blur(5px);
+    background-color: #33333300;
+}
+
+.is--bedroom .footer .construction-wrap {
+    text-align: left;
+}
+
+.is--bedroom .footer .construction-wrap .cost-title {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.is--bedroom .footer .construction-wrap .cost-title span {
+    font-size: 16px;
+    line-height: normal;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #fff;
+    display: block;
+}
+
+.is--bedroom .footer .construction-wrap .cost-title .cost-media {
+    max-width: 16px;
+    margin-top: -3px;
+}
+
+.is--bedroom .footer .construction-wrap .cost-title .cost-media img {
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.is--bedroom .footer .construction-wrap .cost-title {
+    margin-bottom: 10px;
+}
+
+
+
+.is--bedroom .footer .construction-wrap .cost-amount h5 {
+    font-size: 43px;
+    line-height: 80px;
+    font-weight: 300;
+    color: #fff;
+    margin: 0 0 3px;
+}
+
+.is--bedroom .footer .construction-wrap .cost-amount span {
+    display: block;
+    text-transform: capitalize;
+    font-size: 14px;
+    line-height: 20px;
+    color: #fff;
+    font-weight: 400;
+}
+
+.is--bedroom .footer .construction-wrap .action-btn {
+    margin: 30px 0;
+    max-width: 145px;
+    display: flex;
+    align-items: center;
+}
+
+.is--bedroom .footer .construction-wrap .action-btn a {
+    display: block;
+    text-decoration: none;
+    color: #1e1e1e;
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 400;
+    background: #fff;
+    padding: 9px 12px;
+    border-radius: 20px;
+}
+
+.is--bedroom .footer .construction-wrap .action-btn a svg {
+    width: 10px;
+    height: 7px;
+}
+
+.is--bedroom .footer .construction-wrap .cost-amount p {
+    font-size: 10px;
+    line-height: 14px;
+    font-weight: 400;
+    margin: 10px 0;
+    max-width: 250px;
+}
+
+.is--bedroom button.btn.btn-primary.next-btn {
+    background: rgba(255, 255, 255, 0.4);
+    position: absolute;
+    /* right: -88px; */
+    right: -169px;
+    left: auto;
+    z-index: 1111;
+    min-height: 150px;
+    max-width: 224px;
+    border: none;
+    border-radius: 5px;
+}
+
+.is--bedroom button.btn.btn-primary.next-btn img#thumbnail {
+    max-width: 100%;
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+.is--bedroom .arrow-wrap {
+    position: absolute;
+    left: 110px;
+    top: 110px;
+    z-index: 11;
+
+}
+
+.is--bedroom .arrow-wrap a {
+    max-width: 65px;
+    height: 20px;
+    display: block;
+}
+
+.is--bedroom .arrow-wrap a img {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.is--bedroom .title-badge {
+    position: absolute;
+    top: 160px;
+    left: 110px;
+    z-index: 1111;
+    background-image: url('../images/bed/bed.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 437px;
+    min-height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 20px;
+    align-items: center;
+    justify-content: space-evenly;
+    border-radius: 20px;
+}
+
+.is--bedroom .title-badge .extra-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.4s ease-in-out;
+}
+
+.is--bedroom .title-badge .extra-content.open {
+    max-height: 350px;
+    /* Adjust based on the expected height of content */
+}
+
+.is--bedroom .title-badge .read-btn {
+    cursor: pointer;
+    color: #007bff;
+    text-decoration: none;
+    background: #b3afad;
+    max-width: 164px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    color: #1e1e1e;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 11px;
+    text-transform: capitalize;
+}
+
+.is--bedroom .title-badge .read-btn span {
+    display: inline-block;
+    transform: rotate(0deg);
+    transition: transform 0.3s ease;
+    width: 20px;
+    height: 20px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 20px;
+    line-height: 22px;
+    font-size: 19px;
+}
+
+/* .is--bedroom .read-btn.open span {
+    transform: rotate(45deg);
+} */
+
+.is--bedroom .title-badge h2 {
+    font-size: 32px;
+    font-weight: 500;
+    line-height: 50px;
+    color: #1e1e1e;
+    margin: 0;
+}
+
+.is--bedroom .title-badge p {
+    font-size: 18px;
+    line-height: 26px;
+    font-weight: 400;
+    color: #1e1e1e;
+    text-align: center;
+    margin: 0 0 12px;
+}

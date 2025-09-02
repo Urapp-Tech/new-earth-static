@@ -1,0 +1,166 @@
+.lounge .bed-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111111111;
+    display: flex;
+    justify-content: center;
+    /* transform: translate(-336px, 177px); */
+    transform: translate(-266px, 111px);
+    max-width: 200px;
+    margin: auto;
+}
+
+.lounge .kitchen-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 111111;
+    display: flex;
+    justify-content: center;
+    /* transform: translate(-336px, 177px); */
+    transform: translate(326px, 111px);
+    max-width: 150px;
+    margin: auto;
+}
+
+.lounge .bath-btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 11111;
+    display: flex;
+    justify-content: center;
+    /* transform: translate(-336px, 177px); */
+    transform: translate(34px, 111px);
+}
+
+.lounge .office-btn {
+    position: absolute;
+    top: 0;
+    left: auto;
+    right: 0;
+    z-index: 11111;
+    display: flex;
+    justify-content: center;
+    /* transform: translate(-336px, 177px); */
+    transform: translate(-148px, 334px);
+}
+
+.lounge .action-wraps {
+    text-decoration: none;
+    background: rgba(255, 255, 255, 0.4);
+    max-width: 164px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.lounge .action-wraps span {
+    font-size: 14px;
+    line-height: 23px;
+    font-weight: 700;
+    color: #1e1e1e;
+    text-transform: capitalize;
+}
+
+.lounge .action-wraps label {
+    width: 20px;
+    height: 20px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    line-height: 20px;
+    display: block;
+    margin: 0;
+}
+
+.lounge .action-wraps label img {
+    max-width: 100%;
+    width: 100%;
+    object-fit: contain;
+}
+
+/* .zoom-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: scaleY(0);
+    transition: transform 1.3s linear;
+    z-index: 1111;
+} */
+.zoom-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform-origin: top;
+    /* Folds from top */
+    /* transform: perspective(1200px) rotate(-90deg) scaleZ(0); */
+    transform: translateX(-100%);
+    opacity: 0;
+    transition: transform 1.5s ease-in-out, opacity 1s linear;
+    z-index: 9999999999;
+    pointer-events: none;
+}
+
+.zoom-transition.active {
+    /* transform: perspective(1200px) rotate(0deg) scaleZ(1); */
+    transform: translateX(0);
+    opacity: 1;
+    z-index: 9999999999;
+    pointer-events: auto;
+}
+
+
+#zoomEffect1 {
+    background: url('../images/bed/bed-1.webp');
+}
+
+#zoomEffect2 {
+    background: url('../images/bathroom/bath-1.webp');
+}
+
+#zoomEffect3 {
+    background: url('../images/kitchen/kitchen-1.webp');
+}
+
+#zoomEffect4 {
+    background: url('../images/office/office-1.webp');
+}
+
+/* .zoom-transition.active {
+    transform: scaleY(1.1);
+    opacity: 0.2; 
+    z-index: 1111111111111;
+} */
+/* new 30-5-25 */
+
+/* Page entry animation */
+
+.is--bed {
+    opacity: 0;
+    transform: scaleY(1.5);
+    /* Slight zoom-in effect */
+    transition: opacity 1.8s ease-in-out, transform 1.5s ease-out;
+}
+
+/* When the page is fully loaded */
+.bed.page-loaded {
+    opacity: 1;
+    transform: scaleY(1);
+}

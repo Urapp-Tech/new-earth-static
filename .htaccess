@@ -1,0 +1,14 @@
+# Enable the Rewrite Engine
+RewriteEngine On
+
+# Set the base directory
+RewriteBase /
+
+# Redirect all requests to index.html if no file or directory is found
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ /home.html [L]
+
+# Allow direct access to .html files
+RewriteCond %{REQUEST_URI} \.html$ [NC]
+RewriteRule ^ - [L]

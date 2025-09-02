@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lounge</title>
+  <link rel="icon" type="image/x-icon" href="assets/images/fav.png">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="Stylesheet" href="assets/css/style.css" />
+</head>
+
+<body class="is--bedroom lounge">
+
+  <header>
+    <div class="container">
+      <div class="row header-main">
+        <div class="col-md-6">
+          <a href="home.html">
+            <div class="logo-wrap">
+              <img src="assets/images/logo.png" alt="logo" width="467" height="92" class="desktop-logo">
+              <img src="assets/images/icon/m-logo.png" width="39" height="24" alt="logo" class="mobile-logo">
+            </div>
+          </a>
+
+        </div>
+        <div class="col-md-6">
+          <div class="action-btn">
+            <a href="lounge.html" class="desktop-menu">
+
+              Transform now
+
+
+            </a>
+            <img src="assets/images/icon/menu.png" alt="icon" width="36" height="36" class="menu-mobile">
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </header>
+  <div class="zoom-transition" id="zoomEffect1"></div>
+  <div class="zoom-transition" id="zoomEffect2"></div>
+  <div class="zoom-transition" id="zoomEffect3"></div>
+  <div class="zoom-transition" id="zoomEffect4"></div>
+  <div class="main-content">
+
+    <div class="arrow-wrap">
+      <!-- <a href="#">
+        <img src="assets/images/icon/left-arrow.png" alt="icon" width="65" height="20">
+      </a> -->
+    </div>
+    <div class="title-badge">
+
+      <h2>Living room</h2>
+      <p>Imagine starting your day in this inspiring environment.</p>
+      <div class="extra-content">
+        <p>By surrounding yourself with thoughtful design that prioritizes your wellbeing, you're investing in a more
+          balanced, fulfilling life.</p>
+        <p>Your living space shapes your daily experience. Choose one that nurtures your best self.</p>
+        <p>How might it transform your mood, productivity, and relationships?</p>
+      </div>
+      <a class="read-btn" onclick="toggleContent()">read more <span>+</span></a>
+    </div>
+    <div class="bed-btn">
+      <a href="bedroom.html" class="action-wraps" id="zoomButton" data-effect="zoomEffect1">
+        <span>bedroom</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+
+      </a>
+    </div>
+    <div class="bath-btn">
+      <a href="bathroom.html" class="action-wraps" id="zoomButton1" data-effect="zoomEffect2">
+        <span>bathroom</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+      </a>
+    </div>
+    <div class="kitchen-btn">
+      <a href="kitchen.html" class="action-wraps" id="zoomButton2" data-effect="zoomEffect3">
+        <span>kitchen</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+      </a>
+    </div>
+    <div class="office-btn">
+      <a href="office.html" class="action-wraps" id="zoomButton3" data-effect="zoomEffect4">
+        <span>office</span>
+        <label>
+          <img src="assets/images/icon/down-arrow.svg" alt="icons" width="10" height="10">
+        </label>
+      </a>
+    </div>
+    <!-- Background Layers -->
+    <div id="background-1" class="background active"
+      style="background-image: url('assets/images/lounge/lounge-1.webp');">
+    </div>
+    <div id="background-2" class="background" style="background-image: url('assets/images/lounge/lounge-2.webp');">
+    </div>
+    <div id="background-3" class="background" style="background-image: url('assets/images/lounge/lounge-3.webp');">
+    </div>
+      <div id="background-4" class="background" style="background-image: url('assets/images/lounge/lounge-4.webp');">
+    </div>
+
+    <!-- Next Button -->
+    <button class="btn btn-primary next-btn" onclick="changeBackground()">
+      <img id="thumbnail" src="assets/images/lounge/lounge-1.webp" alt="Next Background Thumbnail">
+    </button>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-5">
+          <div class="construction-wrap">
+            <div class="cost-title">
+              <span>cost</span>
+              <div class="cost-media">
+                <img src="assets/images/icon/error.png" alt="error" width="16" height="16">
+              </div>
+            </div>
+            <div class="cost-amount">
+              <h5>700,000</h5>
+              <span>paksitani rupees (PKR)</span>
+
+            </div>
+            <div class="action-btn d-none">
+              <a href="#">Transform now <svg xmlns="http://www.w3.org/2000/svg" width="6" height="6" viewBox="0 0 6 6"
+                  fill="none">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M3.24572 2.59923L-1.20394e-07 2.59923L-7.66822e-08 3.59923L3.04718 3.59923L2 4.64641L2.70711 5.35352L5.06066 2.99996L2.70711 0.646409L2 1.35352L3.24572 2.59923Z"
+                    fill="#1E1E1E" />
+                </svg></a>
+            </div>
+
+          </div>
+        </div>
+        <div class="col-md-3">
+          <div class="construction-wrap">
+            <div class="cost-title">
+              <span>area</span>
+              <div class="cost-media">
+                <img src="assets/images/icon/error.png" alt="error" width="16" height="16">
+              </div>
+            </div>
+            <div class="cost-amount">
+              <h5>25x25</h5>
+              <span>Square Feet</span>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="construction-wrap">
+            <div class="cost-title">
+              <span>time</span>
+              <div class="cost-media">
+                <img src="assets/images/icon/error.png" alt="error" width="16" height="16">
+              </div>
+            </div>
+            <div class="cost-amount">
+              <h5>2+ weeks</h5>
+              <span>working days*</span>
+              <!-- <p>* Sit rerum quia aspernatur. Debitis debitis beatae. Dolorum non suscipit.</p> -->
+            </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="expandable-footer" class="expandable-footer">
+    <div class="main-footer">
+      <div class="container">
+        <div class="footer-wrap">
+          <a href="home.html">
+            <div class="footer-logo">
+              <img src="assets/images/logo-white.png" alt="logo" width="164" height="30">
+            </div>
+          </a>
+
+          <div class="footer-nav">
+            <ul>
+              <li>
+                <a href="about-us.html">About us</a>
+              </li>
+              <li>
+                <a href="career.html">Careers</a>
+              </li>
+              <li>
+                <a href="process-two.html">Process</a>
+              </li>
+              <li>
+                <div class="social-wrap">
+                  <a href="#">Follow us</a>
+                  <ul class="social-icons">
+                    <li>
+                      <a href="#">
+                        <img src="assets/images/icon/fb.svg" alt="social" width="24" height="24">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="assets/images/icon/instagram.svg" alt="social" width="24" height="24">
+                      </a>
+                    </li>
+                    <li>
+                      <a href="#">
+                        <img src="assets/images/icon/twitter.svg" alt="social" width="24" height="24">
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let currentBackground = 1;
+    const totalBackgrounds = 4;
+    const contentData = {
+      1: {
+        cost: "890,000",
+        area: " 19’6’’X13’6’’",
+        time: "20"
+      },
+      2: {
+        cost: "775,000",
+        area: " 19’6’’X13’6’’ ",
+        time: "20"
+      },
+      3: {
+        cost: "855,000",
+        area: "19’6’’X13’6’’",
+        time: "20"
+      },
+      4: {
+        cost: "660,000",
+        area: " 14’0’’X18’0’’ ",
+        time: "20"
+      }
+    };
+    const expandableFooter = document.getElementById('expandable-footer'); // Get the footer element
+    function updateThumbnail() {
+      const nextBackgroundIndex = currentBackground % totalBackgrounds + 1;
+      const thumbnail = document.getElementById('thumbnail');
+      // thumbnail.src = `../images/bed/bed-1.webp+${nextBackgroundIndex}`;
+      thumbnail.src = `assets/images/lounge/lounge-${nextBackgroundIndex}.webp`;
+      thumbnail.alt = `Background ${nextBackgroundIndex}`;
+    }
+    function updateContent() {
+      const data = contentData[currentBackground];
+      if (data) {
+        document.querySelector(".col-md-5 .cost-amount h5").textContent = data.cost;
+        document.querySelector(".col-md-3 .cost-amount h5").textContent = data.area;
+        document.querySelector(".col-md-4 .cost-amount h5").textContent = data.time;
+      }
+    }
+
+    function changeBackground() {
+      // Remove active class from current background
+      document.getElementById(`background-${currentBackground}`).classList.remove('active');
+
+      // Increment and loop background index
+      currentBackground = currentBackground % totalBackgrounds + 1;
+
+      // Add active class to the next background
+      document.getElementById(`background-${currentBackground}`).classList.add('active');
+
+      // Update the thumbnail
+      updateThumbnail();
+      updateContent();
+    }
+
+    function previousBackground() {
+      // Remove active class from current background
+      document.getElementById(`background-${currentBackground}`).classList.remove('active');
+
+      // Decrement and loop background index
+      currentBackground = (currentBackground - 2 + totalBackgrounds) % totalBackgrounds + 1;
+
+      // Add active class to the previous background
+      document.getElementById(`background-${currentBackground}`).classList.add('active');
+
+      // Update the thumbnail
+      updateThumbnail();
+      updateContent();
+    }
+    // Throttle function to limit event triggering
+    function throttle(func, limit) {
+      let inThrottle;
+      return function () {
+        const args = arguments;
+        const context = this;
+        if (!inThrottle) {
+          func.apply(context, args);
+          inThrottle = true;
+          setTimeout(() => (inThrottle = false), limit);
+        }
+      };
+    }
+    // Throttled event listener for wheel scroll
+    window.addEventListener(
+      'wheel',
+      throttle((event) => {
+        if (event.deltaY > 0) {
+          expandableFooter.classList.add('expanded');
+          // changeBackground();
+        } else {
+          expandableFooter.classList.remove('expanded');
+          // previousBackground();
+        }
+      }, 600) // Adjust delay as needed
+    );
+
+
+    updateContent();
+    updateThumbnail();
+
+  </script>
+  <script>
+    function toggleContent() {
+      const extraContent = document.querySelector('.extra-content');
+      const readBtn = document.querySelector('.read-btn');
+
+      if (extraContent.classList.contains('open')) {
+        extraContent.classList.remove('open');
+        readBtn.classList.remove('open');
+        readBtn.innerHTML = 'read more <span>+</span>';
+      } else {
+        extraContent.classList.add('open');
+        readBtn.classList.add('open');
+        readBtn.innerHTML = 'read less <span>-</span>';
+      }
+    }
+  </script>
+
+  <script>
+    document.querySelectorAll('[id^="zoomButton"]').forEach(button => {
+      button.addEventListener('click', function (event) {
+        event.preventDefault();
+
+        const effectId = this.getAttribute('data-effect');
+        const zoomEffect = document.getElementById(effectId);
+
+        if (zoomEffect) {
+          zoomEffect.classList.add('active');
+
+          setTimeout(() => {
+            localStorage.setItem('pageLoadEffect', 'true'); // Save state for next page
+            window.location.href = this.getAttribute('href');
+          }, 1500); // Match this delay to the CSS transition duration
+        }
+      });
+    });
+
+   
+  </script>
+
+  <script>
+    function handleViewportChange() {
+      const viewportWidth = window.innerWidth;
+
+      // Check if viewport width is less than or equal to 767.98px
+      if (viewportWidth <= 767.98) {
+        // Redirect to another page if not already on that page
+        if (window.location.pathname !== 'scroll-bg.html') {
+          window.location.href = 'scroll-bg.html';
+        }
+      } else {
+        // Do nothing if it's 768px or more
+      }
+    }
+
+    // Initial check when the page loads
+    handleViewportChange();
+
+    // Add an event listener for viewport size changes
+    window.addEventListener('resize', handleViewportChange);
+
+  </script>
+</body>
+
+</html>

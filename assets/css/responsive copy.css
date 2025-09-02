@@ -1,0 +1,201 @@
+@media screen and (max-width: 1600px) {
+
+    /* .remodel-wrap .row .left-context h2 {
+        font-size: 55px;
+        line-height: 64px;
+    } */
+    .remodel-wrap .row .left-context h2 {
+        font-size: 40px;
+        line-height: 40px;
+    }
+
+    .remodel-wrap .row .right-context ul li span {
+        font-size: 24px;
+        line-height: 37px;
+    }
+
+    .remodel-left {
+        top: 90px;
+    }
+
+    .remodel-left.show {
+        left: 100px !important;
+
+    }
+
+    .remodel-right.show {
+        right: -150px !important;
+    }
+
+    .remodel-right {
+        top: 100px;
+    }
+
+    /* .testimonial-wrap.stm {
+        bottom: 165px;
+    } */
+
+    .hero-wrapper .main-title h1.main-head {
+        font-size: 60px;
+        line-height: 70px;
+        max-width: 670px;
+    }
+
+    .sec-mobile-app .mobile-wrap.show {
+        bottom: 234px;
+    }
+
+    .sec-mobile-app .mobile-wrap {
+        max-width: 500px;
+        /* height: 708px; */
+        left: 212px;
+    }
+
+    .mobile-wrap {
+        left: 212px;
+    }
+
+    .sec-mobile-app .row .mobile-content h2 {
+        font-size: 60px;
+        max-width: 480px;
+        line-height: 80px;
+        margin-bottom: 20px;
+
+    }
+
+    .sec-mobile-app .row .mobile-content .right-ul.show {
+        right: 330px;
+    }
+
+    .sec-mobile-app .row .mobile-content .right-ul {
+        top: 320px;
+    }
+
+    .sec-mobile-app .row .mobile-content ul li {
+        margin-bottom: 5px;
+    }
+
+    .sec-mobile-app .row .mobile-content ul li span {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    /* lounge */
+    .is--bedroom header {
+        padding: 14px 0;
+    }
+
+    .lounge .bed-btn {
+        transform: translate(-210px, 90px);
+    }
+
+    .lounge .bath-btn {
+
+        transform: translate(34px, 90px);
+    }
+
+    .lounge .kitchen-btn {
+        transform: translate(268px, 90px);
+    }
+
+    .lounge .action-wraps span {
+        font-size: 12px;
+        line-height: 18px;
+    }
+
+    .lounge .action-wraps {
+        padding: 8px 15px 6px;
+    }
+
+    .is--bedroom .footer {
+        min-height: 230px;
+        /* background-color: #333333b5; */
+        padding: 2% 0 0;
+        backdrop-filter: blur(5px);
+        background-color: #33333300;
+    }
+
+    .is--bedroom .footer .construction-wrap .cost-amount h5 {
+        font-size: 36px;
+        line-height: 44px;
+    }
+
+    .is--bedroom .footer .construction-wrap .action-btn a {
+        padding: 9px 12px 5px;
+    }
+
+    .is--bedroom .footer .construction-wrap .action-btn {
+        margin: 24px 0 0;
+    }
+
+    .is--bedroom .footer .construction-wrap .cost-title span {
+        font-size: 12px;
+    }
+
+    .is--bedroom .title-badge {
+        max-width: 340px;
+        min-height: 250px;
+        padding: 25px;
+        z-index: 1111;
+    }
+
+    .is--bedroom .title-badge h2 {
+        font-size: 24px;
+        line-height: 39px;
+    }
+
+    .is--bedroom .title-badge p {
+        font-size: 14px;
+        line-height: 17px;
+        margin: 0 0 15px;
+    }
+
+    .is--bedroom button.btn.btn-primary.next-btn {
+        top: auto;
+        bottom: 34px;
+    }
+
+    .is--bedroom .title-badge .read-btn {
+        padding: 7px 16px;
+        font-size: 14px;
+    }
+
+
+}
+
+@media screen and (max-width: 1440px) {
+    .remodel-wrap .row .left-context p {
+        font-weight: bold;
+        font-size: 32px;
+        line-height: 45px;
+        color: #1e1e1e;
+        margin-top: 15px;
+    }
+
+    .remodel-left,
+    .remodel-right {
+        top: 100px;
+    }
+
+    .remodel-right.show {
+        right: -150px;
+    }
+
+
+}
+
+@media screen and (max-width: 1260px) {
+    .remodel-wrap .row .left-context h2 {
+        font-size: 35px;
+        line-height: 36px;
+        margin-bottom: 8px;
+    }
+
+    .remodel-wrap .row .left-context p {
+        font-weight: bold;
+        font-size: 28px;
+        line-height: 35px;
+        color: #1e1e1e;
+        margin-top: 15px;
+    }
+}
