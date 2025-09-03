@@ -219,3 +219,15 @@ body.zoomed {
 .is-mobile-home {
     display: none;
 }
+
+.is--bedroom .footer .col-md-5 {
+    width: 33.33%;
+}
+
+.is--bedroom .footer .col-md-4 {
+    width: 33.33%;
+}
+
+.is--bedroom .footer .col-md-3 {
+    width: 33.33%;
+}
